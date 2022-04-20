@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">SOUL</string>
+    <string name="str_txt_not_have_account"><font color='#434C62'>You dont have an account??</font> <font color='#fc6103'>Register here</font></string>
+    <string name="str_txt_agree_term_and_condition"><font color='#434C62'>Do you agree with our</font> <font color='#fc6103'>terms and condition</font></string>
+    <string name="str_txt_already_member"><font color='#434C62'>I am already member</font> <font color='#fc6103'>Sign in</font></string>
+
+    //hint txt
+    <string name="email_hint"><font size="14">Input your email here</font></string>
+    <string name="password_hint"><font size="14">Input your password here</font></string>
+    <string name="nickname_hint"><font size="14">Input your nickname here</font></string>
+
+    <string name="str_txt_makingTheWorld">Making The World a better place.</string>
+    <string name="str_txt_soul_to_you">© 2022 SOUL TO YOU, Inc. All rights reserved.</string>
+    <string name="str_txt_login">Login</string>
+    <string name="str_txt_pls_login">Please login to continue using this application</string>
+    <string name="str_txt_email_hint">Input your email here</string>
+    <string name="str_txt_password_hint">Input your password here</string>
+    <string name="str_txt_sign_up_with_gmail">Signup with Gmail</string>
+    <string name="str_txt_sign_up_facebook">Signup with Facebook</string>
+    <string name="str_txt_email">Email</string>
+    <string name="str_txt_password">Password</string>
+    <string name="str_txt_forgot_password">Forgot Password?</string>
+    <string name="str_txt_retype_password">Retype Password</string>
+    <string name="str_txt_sign_up">Sign up</string>
+    <string name="str_txt_congratulation">Congratulation</string>
+    <string name="str_txt_complete_registration">You Successfully completed your registration\nprocess, login with your account</string>
+    <string name="str_txt_create_free_account">Create Your\nFree Account</string>
+    <string name="str_txt_go_back_to_login">Go Back To Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_account">Account</string>
+    <string name="str_artist">Artists</string>
+    <string name="str_news">News</string>
+    <string name="str_video">Video</string>
+    <string name="str_home">Home</string>
+    <string name="str_txt_myprofile">My Profile</string>
+    <string name="str_txt_skip"><![CDATA[Skip >>]]></string>
+    <string name="str_btn_let_rock">Let\'s Rock</string>
+    <string name="str_txt_nickname">Nickname</string>
+    <string name="str_txt_mobile_number">Mobile Number</string>
+    <string name="str_txt_subscriber">Subscribers</string>
+    <string name="str_txt_solo_artist">Solo Artists</string>
+    <string name="str_txt_solo_kpop_star">Solo Kpop Stars</string>
+    <string name="str_txt_news">News</string>
+
+
+</resources>

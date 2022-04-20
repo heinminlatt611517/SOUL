@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    app:startDestination="@+id/navigation_home">
+
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.heinminlatt.soul_client_app.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+
+        <argument android:name="name"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_navigation_home_to_video"
+            app:destination="@id/navigation_video" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_video"
+        android:name="com.heinminlatt.soul_client_app.fragments.VideoFragment"
+        android:label="Video"
+        tools:layout="@layout/fragment_video" >
+
+        <action
+            android:id="@+id/action_video_to_new"
+            app:destination="@id/navigation_news" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.heinminlatt.soul_client_app.fragments.NewsFragment"
+        android:label="News"
+        tools:layout="@layout/fragment_news" >
+
+
+        <action
+            android:id="@+id/action_news_to_artist"
+            app:destination="@id/navigation_artist" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_artist"
+        android:name="com.heinminlatt.soul_client_app.fragments.ArtistFragment"
+        android:label="Artist"
+        tools:layout="@layout/fragment_artist" >
+
+        <action
+            android:id="@+id/action_artist_to_account"
+            app:destination="@id/navigation_account" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.heinminlatt.soul_client_app.fragments.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account" >
+
+    </fragment>
+
+</navigation>
