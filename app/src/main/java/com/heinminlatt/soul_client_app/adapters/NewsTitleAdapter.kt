@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.item_news_tiltle.view.*
 class NewsTitleAdapter (delegate: HomeNewsTitleItemDelegate) : BaseRecyclerAdapter<BaseViewHolder<String>,String>() {
 
     var mDelegate = delegate
-    var row_index = -1
+    var row_index = 0
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<String> {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_news_tiltle, parent, false)
@@ -25,7 +25,7 @@ class NewsTitleAdapter (delegate: HomeNewsTitleItemDelegate) : BaseRecyclerAdapt
     override fun onBindViewHolder(holder: BaseViewHolder<String>, position: Int) {
         var msg = mData[position]
         holder.itemView.tv_news_title.text = msg;
-        holder.itemView.news_layout.setOnClickListener {
+        holder.itemView.cv_news_title.setOnClickListener {
            row_index = position
             notifyDataSetChanged()
         }
@@ -35,7 +35,8 @@ class NewsTitleAdapter (delegate: HomeNewsTitleItemDelegate) : BaseRecyclerAdapt
             holder.itemView.tv_news_title.setTextColor(Color.parseColor("#ffffff"))
         }
         else{
-            holder.itemView.cv_news_title.setBackgroundColor(Color.parseColor("#D1D4D6"))
+            holder.itemView.cv_news_title.setBackgroundColor(Color.parseColor("#F7F7F7"))
+            holder.itemView.tv_news_title.setTextColor(Color.parseColor("#A1A6AD"))
         }
         Log.d("","$msg")
     }

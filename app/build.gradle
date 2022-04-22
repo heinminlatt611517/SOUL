@@ -47,6 +47,11 @@ dependencies {
     // Kotlin
     implementation rootProject.ext.libraries.ktx
 
+    //indicator
+    implementation 'com.tbuonomo:dotsindicator:4.2'
+
+
+
     // App dependencies
     implementation rootProject.ext.libraries.appCompat
     implementation rootProject.ext.libraries.constraintLayout

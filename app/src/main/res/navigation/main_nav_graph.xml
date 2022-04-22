@@ -63,7 +63,7 @@
         android:id="@+id/navigation_account"
         android:name="com.heinminlatt.soul_client_app.fragments.AccountFragment"
         android:label="Account"
-        tools:layout="@layout/fragment_account" >
+        tools:layout="@layout/fragment_profile" >
 
     </fragment>
 

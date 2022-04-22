@@ -95,7 +95,7 @@ dependencies {
     testImplementation rootProject.ext.libraries.roboelectric
 
     //akexorcist_localization
-    implementation rootProject.ext.libraries.akexorcist_localization
+    //implementation rootProject.ext.libraries.akexorcist_localization
     //circleImageView
     implementation rootProject.ext.libraries.circleImageView
 

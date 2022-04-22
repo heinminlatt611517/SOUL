@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.heinminlatt.soul_client_app.views.viewPods.ReactionViewPod
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="@dimen/margin_medium"
+    android:background="@drawable/bg_rounded_corner"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_reaction_like"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:src="@drawable/ic_reaction_like"
+        />
+
+    <TextView
+        android:id="@+id/tv_reaction_like_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_reaction_like"
+        android:text="200"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:gravity="center"
+        android:textColor="@color/color_gray_light"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_reaction_unLike"
+        android:layout_toRightOf="@+id/tv_reaction_like_count"
+        android:src="@drawable/ic_reaction_unlike"
+        android:paddingTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_large"
+        />
+
+    <TextView
+        android:id="@+id/tv_reaction_unlike_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_reaction_unLike"
+        android:text="12"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:gravity="center"
+        android:textColor="@color/color_gray_light"/>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_reaction_message"
+        android:layout_toRightOf="@+id/tv_reaction_unlike_count"
+        android:src="@drawable/ic_reaction_message"
+        android:paddingTop="3dp"
+        android:layout_marginLeft="@dimen/margin_large"
+        />
+
+    <TextView
+        android:id="@+id/tv_reaction_message_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_reaction_message"
+        android:text="12"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:gravity="center"
+        android:textColor="@color/color_gray_light"/>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_reaction_more_vest"
+        android:src="@drawable/ic_reaction_more_vest"
+        android:layout_marginRight="@dimen/margin_small"
+        android:paddingTop="3dp"
+        android:layout_alignParentEnd="true"
+        />
+</com.heinminlatt.soul_client_app.views.viewPods.ReactionViewPod>

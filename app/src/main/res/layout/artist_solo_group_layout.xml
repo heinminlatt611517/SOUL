@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/margin_medium_2"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tv_solo_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_txt_solo"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_viewMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_txt_viewMore"
+        android:textSize="14sp"
+        android:layout_marginRight="@dimen/margin_medium_2"
+        android:textColor="@color/color_view_more"
+        app:layout_constraintTop_toTopOf="@+id/tv_solo_group"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_solo_group"
+        app:layout_constraintEnd_toStartOf="@+id/iv_viewMore"/>
+
+    <ImageView
+        android:id="@+id/iv_viewMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_solo_group"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_solo_group"
+        android:src="@drawable/ic_right_arrow"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/margin_medium"
+        android:id="@+id/rv_solo_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_solo_group"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

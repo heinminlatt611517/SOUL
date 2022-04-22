@@ -42,6 +42,16 @@
     <string name="str_txt_solo_artist">Solo Artists</string>
     <string name="str_txt_solo_kpop_star">Solo Kpop Stars</string>
     <string name="str_txt_news">News</string>
+    <string name="str_txt_top_video">Top Videos</string>
+    <string name="str_txt_video">Videos</string>
+    <string name="str_txt_profile">Profile</string>
+
+    <string name="str_txt_favourite">My Favourites</string>
+    <string name="str_txt_artist">Artists</string>
+    <string name="str_txt_boy_group">Boy Groups</string>
+    <string name="str_txt_viewMore">View more</string>
+    <string name="str_txt_girl_group">Girl Groups</string>
+    <string name="str_txt_solo">SOLO Artists</string>
 
 
 </resources>
