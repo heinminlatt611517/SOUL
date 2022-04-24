@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color"
+    tools:context=".activities.SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:background="@android:color/white"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_left_arrow"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingLeft="14dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_artist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/str_txt_setting"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/white"
+        android:padding="@dimen/margin_medium_2"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        android:gravity="center"
+        android:id="@+id/language_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_txt_language"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:id="@+id/tv_language"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            app:strokeColor="@color/text_color"
+            app:strokeWidth="1dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardCornerRadius="16dp"
+           >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/layout_my"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_my"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_eng"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/statusTransparent"
+                    android:gravity="center">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_eng"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/eng"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/white"
+        android:padding="@dimen/margin_medium_2"
+        app:layout_constraintTop_toBottomOf="@+id/language_layout"
+        android:gravity="center"
+        android:id="@+id/changePassword_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_txt_changePassword"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            />
+
+        <ImageView
+            android:id="@+id/iv_changePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_arrow"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/white"
+        android:padding="@dimen/margin_medium_2"
+        app:layout_constraintTop_toBottomOf="@+id/changePassword_layout"
+        android:gravity="center"
+        android:id="@+id/clearCache_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_txt_clearCache"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_clearCache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24 kbB"
+            android:layout_alignParentEnd="true"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/white"
+        android:padding="@dimen/margin_medium_2"
+        app:layout_constraintTop_toBottomOf="@+id/clearCache_layout"
+        android:gravity="center"
+        android:id="@+id/rate_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_txt_rateUs"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            />
+
+        <ImageView
+            android:id="@+id/iv_reat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_arrow"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ic_setting_bg"
+        android:gravity="center"
+        >
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:layout_marginTop="@dimen/margin_large"
+             android:gravity="center">
+             <ImageView
+                 android:id="@+id/iv_appLogo"
+                 android:layout_width="50dp"
+                 android:layout_height="40dp"
+                 android:src="@drawable/ic_app_logo"
+                 />
+
+             <TextView
+                 android:id="@+id/tv1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/str_txt_makingTheWorld"
+                 android:textSize="14sp"
+                 android:gravity="center"
+                 android:textStyle="italic"
+                 android:layout_marginTop="@dimen/margin_medium"
+                 android:fontFamily="@font/rancho_regular"/>
+
+             <TextView
+                 android:id="@+id/tv_app_version"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Version : 1.0.0"
+                 android:textSize="14sp"
+                 android:gravity="center"
+                 android:layout_marginTop="@dimen/margin_medium"
+                 android:textStyle="italic"
+                 android:fontFamily="@font/rancho_regular"
+                 android:textColor="@color/color_view_more"/>
+         </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

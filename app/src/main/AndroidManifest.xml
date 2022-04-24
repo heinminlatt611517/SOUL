@@ -12,9 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOUL.NoActionBar">
-        <activity android:name=".activities.VideoDetailsActivity"></activity>
+        <activity android:name=".activities.MyFavouriteActivity"></activity>
+        <activity android:name=".activities.SettingActivity" />
+        <activity android:name=".activities.EditProfileActivity" />
+        <activity android:name=".activities.VideoDetailsActivity" />
         <activity android:name=".activities.NewDetailsActivity" />
-        <activity android:name=".activities.ArtistCategory" />
+        <activity android:name=".activities.ArtistCategoryActivity" />
         <activity android:name=".activities.UpdateProfileActivity" />
         <activity android:name=".activities.SignUpSuccessActivity" />
         <activity android:name=".activities.SignUpActivity" />

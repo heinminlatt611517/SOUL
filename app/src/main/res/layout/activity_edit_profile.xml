@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color"
+    tools:context=".activities.EditProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/str_txt_editProfile"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingStart="14dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingEnd="14dp"
+            android:textColor="@color/black"
+            android:text="@string/str_txt_done">
+        </TextView>
+    </RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_large"
+        android:paddingBottom="@dimen/margin_medium_2"
+        android:background="@color/white"
+        android:layout_marginTop="4dp"
+        android:id="@+id/upload_constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+        <ImageView
+            android:id="@+id/iv_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/user"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/ic_circle_stroke_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/margin_large"/>
+        <ImageView
+            android:id="@+id/iv_plus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_plus"
+            android:background="@drawable/circle_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_upload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.597"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/white"
+        android:padding="@dimen/margin_medium_2"
+        app:layout_constraintTop_toBottomOf="@+id/upload_constraintLayout"
+        android:gravity="center"
+        android:id="@+id/nickName_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_txt_nickName"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hein Min Latt"
+            android:layout_alignParentEnd="true"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/white"
+        android:padding="@dimen/margin_medium_2"
+        app:layout_constraintTop_toBottomOf="@+id/nickName_layout"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_txt_mobileno"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_mobileNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+95 9754 357 053"
+            android:layout_alignParentEnd="true"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -60,6 +60,16 @@
     <string name="str_txt_relatedNews">Related News</string>
     <string name="str_txt_video_detail">Video Details</string>
     <string name="str_txt_related_videos">Related Videos</string>
+    <string name="str_txt_editProfile">Edit Profile</string>
+    <string name="str_txt_done">Done</string>
+    <string name="str_txt_nickName">Nickname</string>
+    <string name="str_txt_mobileno">Mobile Number</string>
+    <string name="str_txt_language">Languages</string>
+    <string name="str_txt_changePassword">Change Password</string>
+    <string name="str_txt_clearCache">Clear Cache</string>
+    <string name="str_txt_setting">Settings</string>
+    <string name="str_txt_myFavourite">My Favourite</string>
+    <string name="str_txt_rateUs">Rate Us</string>
 
 
 </resources>

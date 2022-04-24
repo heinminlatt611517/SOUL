@@ -7,8 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.soul_client_app.R
-import com.heinminlatt.soul_client_app.activities.ArtistCategory
-import com.heinminlatt.soul_client_app.activities.LoginActivity
+import com.heinminlatt.soul_client_app.activities.ArtistCategoryActivity
 import com.heinminlatt.soul_client_app.adapters.*
 import com.heinminlatt.soul_client_app.utils.boyGroupArtist
 import com.heinminlatt.soul_client_app.utils.girlGroupArtist
@@ -70,15 +69,15 @@ class ArtistFragment : Fragment() {
 
     private fun setUpActionListener() {
         iv_viewMore_boy.setOnClickListener {
-            startActivity(context?.let { it1 -> ArtistCategory.newIntent(it1, boyGroupArtist) })
+            startActivity(context?.let { it1 -> ArtistCategoryActivity.newIntent(it1, boyGroupArtist) })
         }
 
         iv_viewMore_girl.setOnClickListener {
-            startActivity(context?.let { it1 -> ArtistCategory.newIntent(it1, girlGroupArtist) })
+            startActivity(context?.let { it1 -> ArtistCategoryActivity.newIntent(it1, girlGroupArtist) })
         }
 
         iv_viewMore_solo_artist.setOnClickListener {
-            startActivity(context?.let { it1 -> ArtistCategory.newIntent(it1, soloGroupArtist) })
+            startActivity(context?.let { it1 -> ArtistCategoryActivity.newIntent(it1, soloGroupArtist) })
         }
     }
 

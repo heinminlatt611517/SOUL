@@ -13,13 +13,13 @@ import com.heinminlatt.soul_client_app.utils.boyGroupArtist
 import com.heinminlatt.soul_client_app.utils.girlGroupArtist
 import kotlinx.android.synthetic.main.activity_artist_category.*
 
-class ArtistCategory : BaseActivity() {
+class ArtistCategoryActivity : BaseActivity() {
 
 
     companion object {
        private const val ARTIST_NAME_EXTRA="Artist Name Extra"
         fun newIntent(context: Context,artistName : String) : Intent {
-            val intent = Intent(context, ArtistCategory::class.java)
+            val intent = Intent(context, ArtistCategoryActivity::class.java)
             intent.putExtra(ARTIST_NAME_EXTRA,artistName)
             return intent
         }
