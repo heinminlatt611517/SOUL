@@ -5,9 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.soul_client_app.R
+import com.heinminlatt.soul_client_app.activities.NewDetailsActivity
+import com.heinminlatt.soul_client_app.activities.VideoDetailsActivity
 import com.heinminlatt.soul_client_app.adapters.*
+import com.heinminlatt.soul_client_app.mvp.presenters.HomePresenter
+import com.heinminlatt.soul_client_app.mvp.presenters.VideoPresenter
+import com.heinminlatt.soul_client_app.mvp.presenters.impls.HomePresenterImpl
+import com.heinminlatt.soul_client_app.mvp.presenters.impls.VideoPresenterImpl
+import com.heinminlatt.soul_client_app.mvp.views.VideoView
 import kotlinx.android.synthetic.main.fragment_video.*
 import kotlinx.android.synthetic.main.home_news_layout.*
 import kotlinx.android.synthetic.main.home_solo_artist_layout.*
@@ -16,7 +24,7 @@ import kotlinx.android.synthetic.main.top_video_layout.*
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class VideoFragment : Fragment() {
+class VideoFragment : Fragment(),VideoView {
 
     private var param1: String? = null
     private var param2: String? = null
@@ -36,6 +44,10 @@ class VideoFragment : Fragment() {
     private lateinit var mSoloVideoAdapter: SoloVideoAdapter
     private lateinit var mVideoTitleAdapter: VideoTitleAdapter
     private lateinit var mTopVideoAdapter: TopVideoAdapter
+
+
+    //presenter
+    private lateinit var mVideoPresenter : VideoPresenter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,13 +94,22 @@ class VideoFragment : Fragment() {
         //solo video
         rv_top_video.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-        mTopVideoAdapter = TopVideoAdapter()
+        mTopVideoAdapter = TopVideoAdapter(mVideoPresenter)
         rv_top_video.adapter = mTopVideoAdapter
 
         mTopVideoAdapter.setNewData(mutableListOf(1,2,3,5,6,7,7,8))
     }
 
     private fun setUpPresenter() {
+        mVideoPresenter = ViewModelProviders.of(this).get(VideoPresenterImpl::class.java)
+        mVideoPresenter.initPresenter(this)
+    }
+
+    override fun navigateToVideoDetailScreen() {
+        startActivity(context?.let { it1 -> VideoDetailsActivity.newIntent(it1) })
+    }
+
+    override fun showErrorMessage(errorMessage: String) {
 
     }
 

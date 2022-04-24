@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color"
+    tools:context=".activities.NewDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:background="@android:color/white"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_left_arrow"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingLeft="14dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_artist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/str_txt_news_detail"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_search_foreground"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_gray_light1"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_xxlarge"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_news_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_news_detail"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="@dimen/margin_medium_2">
+
+
+                <TextView
+                    android:id="@+id/tv_new_detail_status"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Breaking"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/gradient_bg"
+                    android:padding="@dimen/margin_small"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_new_detail_status"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_new_detail_status"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_time_foreground" />
+
+                    <TextView
+                        android:id="@+id/tv_news_count_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 DAYS AGO"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/color_gray" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_news_detail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Big Bang unveils the title of their comeback through a new teaser title poster"
+                    android:gravity="left"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/tv_news_detail_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_news_detail_title"
+                    android:text="BTS has taken home two awards at the 2022 iHeartRadio Music Awards, BTS won Best Music Video with “Butter” as well as Best Fan Army. BTS x Nike possible collaboration, BTS Variety Show Run BTS Hiatus and possible return date, BTS Jin Health Update and Military service, Suga Instagram cat sugar post, Jungkook brother shares photo of Jungkook with his two dogs Song and Paeng, BTS attending Grammys awards and PTD on stage Las Vegas Concerts."/>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:paddingLeft="@dimen/margin_large"
+                    android:background="@drawable/bg_rounded_corner"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_news_detail_desc"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iv_reaction_like"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:src="@drawable/ic_reaction_like"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_reaction_like_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_reaction_like"
+                        android:text="200"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:textColor="@color/color_gray_light"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iv_reaction_unLike"
+                        android:layout_toRightOf="@+id/tv_reaction_like_count"
+                        android:src="@drawable/ic_reaction_unlike"
+                        android:paddingTop="@dimen/margin_small"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_reaction_unlike_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_reaction_unLike"
+                        android:text="12"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:textColor="@color/color_gray_light"/>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iv_reaction_message"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toRightOf="@+id/tv_reaction_unlike_count"
+                        android:src="@drawable/ic_reaction_message"
+                        android:paddingTop="3dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_reaction_message_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_reaction_message"
+                        android:text="12"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:gravity="center"
+                        android:textColor="@color/color_gray_light"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/str_txt_comment"
+                    android:textColor="@color/color_view_more"
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"/>
+
+                <TextView
+                    android:id="@+id/tv_comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/tv_comment"
+                    app:layout_constraintTop_toTopOf="@+id/tv_comment"
+                    android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+                <ImageView
+                    android:id="@+id/iv_viewMoreComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_down_arrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_comment"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_comment"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:id="@+id/rv_news_detail_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_comment"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:padding="@dimen/margin_medium_2"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_txt_relatedNews"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_news_detail_related"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_xxlarge"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_comment"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOUL.NoActionBar">
-        <activity android:name=".activities.UpdateProfileActivity"></activity>
+        <activity android:name=".activities.VideoDetailsActivity"></activity>
+        <activity android:name=".activities.NewDetailsActivity" />
+        <activity android:name=".activities.ArtistCategory" />
+        <activity android:name=".activities.UpdateProfileActivity" />
         <activity android:name=".activities.SignUpSuccessActivity" />
         <activity android:name=".activities.SignUpActivity" />
         <activity android:name=".activities.LoginActivity" />
@@ -23,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.MainActivity" />
     </application>
 
 </manifest>

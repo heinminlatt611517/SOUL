@@ -9,7 +9,7 @@ class HomePresenterImpl : HomePresenter,AbstractBasePresenter<HomeView>() {
 
     }
 
-    override fun onTapNewsTitle() {
-        mView?.refreshNewsTitle()
+    override fun onTapNewsItem() {
+        mView?.navigateToNewsDetailScreen()
     }
 }

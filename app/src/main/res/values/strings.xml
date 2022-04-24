@@ -52,6 +52,14 @@
     <string name="str_txt_viewMore">View more</string>
     <string name="str_txt_girl_group">Girl Groups</string>
     <string name="str_txt_solo">SOLO Artists</string>
+    <string name="str_txt_all_girl_group">All Girl Groups</string>
+    <string name="str_txt_all_boy_group">All Boy Groups</string>
+    <string name="str_txt_sort_by">Sort By</string>
+    <string name="str_txt_news_detail">New Details</string>
+    <string name="str_txt_comment">Comments</string>
+    <string name="str_txt_relatedNews">Related News</string>
+    <string name="str_txt_video_detail">Video Details</string>
+    <string name="str_txt_related_videos">Related Videos</string>
 
 
 </resources>

@@ -26,10 +26,10 @@
         android:textColor="@color/color_view_more"
         app:layout_constraintTop_toTopOf="@+id/tv_girlGroup"
         app:layout_constraintBottom_toBottomOf="@+id/tv_girlGroup"
-        app:layout_constraintEnd_toStartOf="@+id/iv_viewMore"/>
+        app:layout_constraintEnd_toStartOf="@+id/iv_viewMore_girl"/>
 
     <ImageView
-        android:id="@+id/iv_viewMore"
+        android:id="@+id/iv_viewMore_girl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"

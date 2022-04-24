@@ -94,7 +94,7 @@ class NewsFragment : Fragment(),NewsView {
         //news
         rv_news.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-        mNewsAdapter = NewsAdapter()
+        mNewsAdapter = NewsAdapter(mNewsPresenter)
         rv_news.adapter = mNewsAdapter
 
         mNewsAdapter.setNewData(mutableListOf(1,2,3,4,5,6,7,8))

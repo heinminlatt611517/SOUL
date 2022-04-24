@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_large"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_related_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="12dp"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:id="@+id/iv_related_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_video_detail"
+            android:scaleType="fitXY"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_relatedVideo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="JENNIE - 'SOLO' [MV]"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/cv_related_video"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_more_vest"
+        android:src="@drawable/ic_reaction_more_vest"
+        android:paddingTop="3dp"
+        android:layout_marginRight="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_relatedVideo_title"
+        />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_relatedVideo_title"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_reaction_like"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:src="@drawable/ic_reaction_like"
+            />
+
+        <TextView
+            android:id="@+id/tv_reaction_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_reaction_like"
+            android:text="200"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textColor="@color/color_gray_light"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_reaction_unLike"
+            android:layout_toRightOf="@+id/tv_reaction_like_count"
+            android:src="@drawable/ic_reaction_unlike"
+            android:paddingTop="@dimen/margin_small"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_xxlarge"
+            />
+
+        <TextView
+            android:id="@+id/tv_reaction_unlike_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_reaction_unLike"
+            android:text="12"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textColor="@color/color_gray_light"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_reaction_message"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/tv_reaction_unlike_count"
+            android:src="@drawable/ic_reaction_message"
+            android:paddingTop="3dp"
+            android:layout_marginLeft="@dimen/margin_xxlarge"
+            />
+
+        <TextView
+            android:id="@+id/tv_reaction_message_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_reaction_message"
+            android:text="12"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:gravity="center"
+            android:textColor="@color/color_gray_light"/>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

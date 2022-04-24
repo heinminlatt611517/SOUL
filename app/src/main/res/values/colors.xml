@@ -6,6 +6,7 @@
     <color name="text_color">#2CB9C1</color>
     <color name="color_gray_light">#A1A6AD</color>
     <color name="color_black">#0A2942</color>
+    <color name="color_top_solo_artist">#EFF5FA</color>
 
     <color name="color_solo_video_name">#17A1FA</color>
     <color name="purple_200">#FFBB86FC</color>

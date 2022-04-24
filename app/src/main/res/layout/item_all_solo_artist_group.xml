@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/margin_large">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_solo_artist"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/kpop_img"
+        android:backgroundTint="@color/app_color"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularBorder"
+        app:strokeColor="@color/white"
+        android:padding="2dp"
+        app:strokeWidth="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_groupName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/iv_solo_artist"
+        app:layout_constraintStart_toEndOf="@+id/iv_solo_artist"
+        android:text="BlackPink"
+        android:textAllCaps="true"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/margin_card_medium_2"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/card_evaluation"
+        app:layout_constraintStart_toStartOf="@+id/tv_groupName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_groupName"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:paddingTop="8dp"
+            android:src="@drawable/ic_instagram"
+            android:background="@drawable/ic_sub_pink_bg"/>
+
+        <TextView
+            android:id="@+id/tv_sub2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25K"
+            android:layout_marginLeft="@dimen/margin_card_medium"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:textColor="@color/color_gray_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/color_gray_light"
+            android:text="@string/str_txt_subscriber"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_more_vest"
+        android:src="@drawable/ic_reaction_more_vest"
+        app:layout_constraintTop_toTopOf="@+id/tv_solo_video_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="4dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

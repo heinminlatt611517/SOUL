@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import com.heinminlatt.shared.adapter.BaseRecyclerAdapter
 import com.heinminlatt.shared.views.viewHolders.BaseViewHolder
 import com.heinminlatt.soul_client_app.R
-import com.heinminlatt.soul_client_app.delegate.HomeNewsTitleItemDelegate
+import com.heinminlatt.soul_client_app.delegate.HomeScreenItemDelegate
 import com.heinminlatt.soul_client_app.views.viewHolders.NewsTitleViewHolder
 import kotlinx.android.synthetic.main.item_news_tiltle.view.*
 
 
-class NewsTitleAdapter (delegate: HomeNewsTitleItemDelegate) : BaseRecyclerAdapter<BaseViewHolder<String>,String>() {
+class NewsTitleAdapter (delegate: HomeScreenItemDelegate) : BaseRecyclerAdapter<BaseViewHolder<String>,String>() {
 
     var mDelegate = delegate
     var row_index = 0

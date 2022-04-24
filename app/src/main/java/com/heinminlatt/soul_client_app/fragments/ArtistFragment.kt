@@ -7,7 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.soul_client_app.R
+import com.heinminlatt.soul_client_app.activities.ArtistCategory
+import com.heinminlatt.soul_client_app.activities.LoginActivity
 import com.heinminlatt.soul_client_app.adapters.*
+import com.heinminlatt.soul_client_app.utils.boyGroupArtist
+import com.heinminlatt.soul_client_app.utils.girlGroupArtist
+import com.heinminlatt.soul_client_app.utils.soloGroupArtist
 import kotlinx.android.synthetic.main.artist_boy_group_layout.*
 import kotlinx.android.synthetic.main.artist_girl_group_layout.*
 import kotlinx.android.synthetic.main.artist_solo_group_layout.*
@@ -60,6 +65,21 @@ class ArtistFragment : Fragment() {
 
         setUpViewPagerWithIndicator()
         setUpRecyclerView()
+        setUpActionListener()
+    }
+
+    private fun setUpActionListener() {
+        iv_viewMore_boy.setOnClickListener {
+            startActivity(context?.let { it1 -> ArtistCategory.newIntent(it1, boyGroupArtist) })
+        }
+
+        iv_viewMore_girl.setOnClickListener {
+            startActivity(context?.let { it1 -> ArtistCategory.newIntent(it1, girlGroupArtist) })
+        }
+
+        iv_viewMore_solo_artist.setOnClickListener {
+            startActivity(context?.let { it1 -> ArtistCategory.newIntent(it1, soloGroupArtist) })
+        }
     }
 
     private fun setUpViewPagerWithIndicator() {

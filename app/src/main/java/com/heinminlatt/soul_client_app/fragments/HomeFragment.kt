@@ -8,11 +8,14 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.soul_client_app.R
+import com.heinminlatt.soul_client_app.activities.ArtistCategory
+import com.heinminlatt.soul_client_app.activities.NewDetailsActivity
 import com.heinminlatt.soul_client_app.adapters.*
 import com.heinminlatt.soul_client_app.mvp.presenters.HomePresenter
 import com.heinminlatt.soul_client_app.mvp.presenters.impls.HomePresenterImpl
 import com.heinminlatt.soul_client_app.mvp.presenters.impls.SignUpPresenterImpl
 import com.heinminlatt.soul_client_app.mvp.views.HomeView
+import com.heinminlatt.soul_client_app.utils.girlGroupArtist
 import com.heinminlatt.soul_client_app.views.viewPods.SubscriberViewPod
 import kotlinx.android.synthetic.main.fragment_artist.*
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -106,7 +109,7 @@ class HomeFragment : Fragment() , HomeView{
         //news
         rv_news.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-        mNewsAdapter = NewsAdapter()
+        mNewsAdapter = NewsAdapter(mHomePresenter)
         rv_news.adapter = mNewsAdapter
 
         mNewsAdapter.setNewData(mutableListOf(1,2,3,4,5,6,7,8))
@@ -121,6 +124,10 @@ class HomeFragment : Fragment() , HomeView{
 
     override fun refreshNewsTitle() {
         mNewsTitleAdapter.notifyDataSetChanged()
+    }
+
+    override fun navigateToNewsDetailScreen() {
+        startActivity(context?.let { it1 -> NewDetailsActivity.newIntent(it1) })
     }
 
     override fun showErrorMessage(errorMessage: String) {

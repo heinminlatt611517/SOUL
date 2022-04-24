@@ -11,7 +11,7 @@ class NewsPresenterImpl : NewsPresenter,AbstractBasePresenter<NewsView>() {
 
     }
 
-    override fun onTapNewsTitle() {
+    override fun onTapNewsItem() {
 
     }
 
