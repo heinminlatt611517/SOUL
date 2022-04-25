@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOUL.NoActionBar">
-        <activity android:name=".activities.MyFavouriteActivity"></activity>
+        <activity android:name=".activities.GroupArtistDetailsActivity"></activity>
+        <activity android:name=".activities.SoloArtistDetailsActivity" />
+        <activity android:name=".activities.MyFavouriteActivity" />
         <activity android:name=".activities.SettingActivity" />
         <activity android:name=".activities.EditProfileActivity" />
         <activity android:name=".activities.VideoDetailsActivity" />

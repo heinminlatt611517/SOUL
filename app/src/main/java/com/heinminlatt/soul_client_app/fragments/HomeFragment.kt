@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.activities.NewDetailsActivity
+import com.heinminlatt.soul_client_app.activities.SoloArtistDetailsActivity
 import com.heinminlatt.soul_client_app.adapters.*
 import com.heinminlatt.soul_client_app.mvp.presenters.HomePresenter
 import com.heinminlatt.soul_client_app.mvp.presenters.impls.HomePresenterImpl
@@ -89,7 +90,7 @@ class HomeFragment : Fragment() , HomeView{
         //solo artist
         rv_solo_artist.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        mSoloArtistAdapter = SoloArtistAdapter()
+        mSoloArtistAdapter = SoloArtistAdapter(mHomePresenter)
         rv_solo_artist.adapter = mSoloArtistAdapter
 
         mSoloArtistAdapter.setNewData(mutableListOf(1,2,3,5,6,7,7,8,8,8))
@@ -120,6 +121,10 @@ class HomeFragment : Fragment() , HomeView{
 
     override fun navigateToNewsDetailScreen() {
         startActivity(context?.let { it1 -> NewDetailsActivity.newIntent(it1) })
+    }
+
+    override fun navigateToSoloArtistDetailScreen() {
+        startActivity(context?.let { it1 -> SoloArtistDetailsActivity.newIntent(it1) })
     }
 
     override fun showErrorMessage(errorMessage: String) {

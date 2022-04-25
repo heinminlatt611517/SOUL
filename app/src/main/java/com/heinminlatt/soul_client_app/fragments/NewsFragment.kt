@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.soul_client_app.R
+import com.heinminlatt.soul_client_app.activities.NewDetailsActivity
 import com.heinminlatt.soul_client_app.adapters.NewsAdapter
 import com.heinminlatt.soul_client_app.adapters.NewsTitleAdapter
 import com.heinminlatt.soul_client_app.adapters.SoloVideoAdapter
@@ -98,6 +99,10 @@ class NewsFragment : Fragment(),NewsView {
         rv_news.adapter = mNewsAdapter
 
         mNewsAdapter.setNewData(mutableListOf(1,2,3,4,5,6,7,8))
+    }
+
+    override fun navigateToNewsDetailScreen() {
+        startActivity(context?.let { it1 -> NewDetailsActivity.newIntent(it1) })
     }
 
     override fun showErrorMessage(errorMessage: String) {

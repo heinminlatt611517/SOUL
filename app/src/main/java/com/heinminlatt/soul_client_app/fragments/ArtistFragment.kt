@@ -5,10 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.activities.ArtistCategoryActivity
+import com.heinminlatt.soul_client_app.activities.GroupArtistDetailsActivity
 import com.heinminlatt.soul_client_app.adapters.*
+import com.heinminlatt.soul_client_app.mvp.presenters.ArtistPresenter
+import com.heinminlatt.soul_client_app.mvp.presenters.impls.ArtistPresenterImpl
+import com.heinminlatt.soul_client_app.mvp.views.ArtistView
 import com.heinminlatt.soul_client_app.utils.boyGroupArtist
 import com.heinminlatt.soul_client_app.utils.girlGroupArtist
 import com.heinminlatt.soul_client_app.utils.soloGroupArtist
@@ -22,7 +27,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class ArtistFragment : Fragment() {
+class ArtistFragment : Fragment(),ArtistView {
 
     private var param1: String? = null
     private var param2: String? = null
@@ -51,6 +56,9 @@ class ArtistFragment : Fragment() {
     private lateinit var mGirlArtistAdapter: ArtistGirlAdapter
     private lateinit var mSoloArtistGroupAdapter: ArtistSoloGroupAdapter
 
+    //presenter
+    private lateinit var mArtistPresenter : ArtistPresenter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -62,9 +70,15 @@ class ArtistFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setUpPresenter()
         setUpViewPagerWithIndicator()
         setUpRecyclerView()
         setUpActionListener()
+    }
+
+    private fun setUpPresenter() {
+        mArtistPresenter = ViewModelProviders.of(this).get(ArtistPresenterImpl::class.java)
+        mArtistPresenter.initPresenter(this)
     }
 
     private fun setUpActionListener() {
@@ -83,7 +97,7 @@ class ArtistFragment : Fragment() {
 
     private fun setUpViewPagerWithIndicator() {
 
-        val adapter = context?.let { ArtistViewPagerAdapter(it) }
+        val adapter = context?.let { ArtistViewPagerAdapter(it,mArtistPresenter) }
         vp_artist.adapter = adapter
         dots_indicator.setViewPager(vp_artist)
     }
@@ -112,6 +126,14 @@ class ArtistFragment : Fragment() {
         rv_solo_group.adapter = mSoloArtistGroupAdapter
 
         mSoloArtistGroupAdapter.setNewData(mutableListOf(1,2,3,5,6,7,7,8))
+    }
+
+    override fun navigateToGroupArtistDetailScreen() {
+        startActivity(context?.let { it1 -> GroupArtistDetailsActivity.newIntent(it1) })
+    }
+
+    override fun showErrorMessage(errorMessage: String) {
+
     }
 
 }

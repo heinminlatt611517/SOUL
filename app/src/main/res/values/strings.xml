@@ -70,6 +70,25 @@
     <string name="str_txt_setting">Settings</string>
     <string name="str_txt_myFavourite">My Favourite</string>
     <string name="str_txt_rateUs">Rate Us</string>
+    <string name="str_txt_about">About</string>
+    <string name="str_txt_solo_artist_about">Kim Taeyeon (born March 9, 1989), known simply as Taeyeon is a South Korean singer. She is the leader and main vocalist of the girl group Girls\' Generation.. She is the leader and main vocalist of the girl group Girls\' Generation.</string>
+    <string name="str_txt_bio">Bio</string>
+    <string name="str_txt_stageName">Stage Name :</string>
+    <string name="str_txt_birthName">Birth Name :</string>
+    <string name="str_txt_koreaName">Korea Name :</string>
+    <string name="str_txt_birthday">Birthday :</string>
+    <string name="str_txt_zondic">Zondic :</string>
+    <string name="str_txt_height">Height :</string>
+    <string name="str_txt_weight">Weight :</string>
+    <string name="str_txt_bloodType">Blood Type :</string>
+    <string name="str_txt_mbti">MBTI :</string>
+    <string name="str_txt_soloImage">Solo Images</string>
+    <string name="str_txt_current_member">Current Members</string>
+    <string name="str_txt_former_member">Former Members</string>
+    <string name="str_txt_member">Members</string>
+    <string name="str_txt_abouts">Abouts</string>
+    <string name="str_txt_groupImage">Group Images</string>
+    <string name="str_txt_group_artist_about">BTS has taken home two awards at the 2022 iHeartRadio Music Awards, BTS won Best Music Video with “Butter” as well as Best Fan Army. BTS x Nike possible collaboration, BTS Variety Show Run BTS Hiatus and possible return date, BTS Jin Health Update and Military service, Suga Instagram cat,BTS has taken home two awards at the 2022 iHeartRadio Music Awards, BTS won Best Music Video with “Butter” as well as Best Fan Army. BTS x Nike possible collaboration, BTS Variety Show Run BTS Hiatus and possible return date</string>
 
 
 </resources>

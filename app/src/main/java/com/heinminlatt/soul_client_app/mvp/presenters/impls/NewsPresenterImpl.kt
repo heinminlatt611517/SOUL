@@ -12,7 +12,11 @@ class NewsPresenterImpl : NewsPresenter,AbstractBasePresenter<NewsView>() {
     }
 
     override fun onTapNewsItem() {
-
+      mView?.navigateToNewsDetailScreen()
     }
+
+    override fun onTapSoloArtistItem() {
+    }
+
 
 }

@@ -35,7 +35,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
      fun addReadMore(text: String, textView: TextView) {
-        val ss = SpannableString(text.substring(0, 270) + "... read more")
+        val ss = SpannableString(text.substring(0, 150) + "... read more")
         val clickableSpan: ClickableSpan = object : ClickableSpan() {
             override fun onClick(view: View) {
                 addReadLess(text, textView)
@@ -45,9 +45,9 @@ abstract class BaseActivity : AppCompatActivity() {
                 super.updateDrawState(ds)
                 ds.isUnderlineText = false
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    ds.color = resources.getColor(R.color.colorPrimary, theme)
+                    ds.color = resources.getColor(R.color.color_view_more, theme)
                 } else {
-                    ds.color = resources.getColor(R.color.colorPrimary)
+                    ds.color = resources.getColor(R.color.color_view_more)
                 }
             }
         }
@@ -67,9 +67,9 @@ abstract class BaseActivity : AppCompatActivity() {
                 super.updateDrawState(ds)
                 ds.isUnderlineText = false
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    ds.color = resources.getColor(R.color.colorPrimary, theme)
+                    ds.color = resources.getColor(R.color.color_view_more, theme)
                 } else {
-                    ds.color = resources.getColor(R.color.colorPrimary)
+                    ds.color = resources.getColor(R.color.color_view_more)
                 }
             }
         }

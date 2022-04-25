@@ -8,13 +8,10 @@ import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.heinminlatt.soul_client_app.R
-import com.heinminlatt.soul_client_app.delegate.ArtistScreenItemDelegate
 
 
-class ArtistViewPagerAdapter(
-    private val context: Context,
-    private val mDelegate: ArtistScreenItemDelegate
-) : PagerAdapter() {
+
+class SoloArtistViewPagerAdapter(private val context: Context) : PagerAdapter() {
     private var layoutInflater: LayoutInflater? = null
     private val images = arrayOf<Int>(
         R.drawable.artist_boy,
@@ -36,16 +33,11 @@ class ArtistViewPagerAdapter(
         layoutInflater = context.getSystemService(
             Context.LAYOUT_INFLATER_SERVICE
         ) as LayoutInflater
-        val view: View = layoutInflater!!.inflate(R.layout.item_artist_slider, null)
-        val imageView = view.findViewById<ImageView>(R.id.iv_artist_slider)
+        val view: View = layoutInflater!!.inflate(R.layout.item_solo_artist_slider, null)
+        val imageView = view.findViewById<ImageView>(R.id.iv_home_slider)
         imageView.setImageResource(images[position])
         val viewPager = container as ViewPager
         viewPager.addView(view, 0)
-
-        imageView.setOnClickListener {
-            mDelegate.onTapGroupArtistItem()
-        }
-
         return view
     }
 

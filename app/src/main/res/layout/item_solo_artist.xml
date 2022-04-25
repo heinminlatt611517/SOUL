@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="60dp"
+    android:id="@+id/cv_home_solo_artist"
     android:layout_height="wrap_content"
-    android:gravity="left|center"
     android:layout_marginRight="16dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv_solo_artist"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/kpop_img"
-        android:backgroundTint="@color/app_color"
-        app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularBorder"
-        app:strokeColor="@color/white"
-        android:padding="2dp"
-        app:strokeWidth="4dp" />
-
-    <TextView
-        android:layout_width="match_parent"
+    app:cardElevation="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:text="Taeyeon,Tayeon"
-        android:textSize="12sp"
-        android:gravity="center"
-        android:textColor="@color/color_gray_light"
-        />
+        android:gravity="left|center"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_solo_artist"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/kpop_img"
+            android:backgroundTint="@color/app_color"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularBorder"
+            app:strokeColor="@color/white"
+            android:padding="2dp"
+            app:strokeWidth="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Taeyeon,Tayeon"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:textColor="@color/color_gray_light"
+            />
 
 
-</LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -12,4 +12,8 @@ class HomePresenterImpl : HomePresenter,AbstractBasePresenter<HomeView>() {
     override fun onTapNewsItem() {
         mView?.navigateToNewsDetailScreen()
     }
+
+    override fun onTapSoloArtistItem() {
+        mView?.navigateToSoloArtistDetailScreen()
+    }
 }
