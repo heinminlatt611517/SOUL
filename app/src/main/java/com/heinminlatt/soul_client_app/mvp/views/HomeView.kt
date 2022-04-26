@@ -5,4 +5,5 @@ import com.heinminlatt.shared.mvp.view.BaseView
 interface HomeView : BaseView {
     fun navigateToNewsDetailScreen()
     fun navigateToSoloArtistDetailScreen()
+    fun navigateToSearchScreen()
 }

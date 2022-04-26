@@ -4,6 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import androidx.core.content.ContextCompat
+import com.heinminlatt.soul_client_app.R
+import kotlinx.android.synthetic.main.view_pod_reaction.view.*
 import kotlinx.android.synthetic.main.view_pod_subscriber.view.*
 
 class ReactionViewPod @JvmOverloads constructor(
@@ -11,8 +14,84 @@ class ReactionViewPod @JvmOverloads constructor(
 ) : RelativeLayout(context, attrs, defStyleAttr) {
 
 
-    fun setData(data : String , data2 : String){
+    private var firstTimeClickLike: Boolean = true
+    private var firstTimeClickUnLike: Boolean = true
+
+
+    fun setData(data: String, data2: String) {
         tv_sub1.text = data
         tv_sub2.text = data2
     }
+
+
+    var mDelegate: Delegate? = null
+
+    fun setDelegate(delegate: Delegate) {
+        mDelegate = delegate
+    }
+
+    override fun onFinishInflate() {
+        super.onFinishInflate()
+        setUpListener()
+    }
+
+    private fun setUpListener() {
+        iv_reaction_like.setOnClickListener {
+            mDelegate?.onTapLike()
+
+            if (firstTimeClickLike) {
+                iv_reaction_like.setColorFilter(
+                    ContextCompat.getColor(
+                        context,
+                        R.color.color_pink
+                    ), android.graphics.PorterDuff.Mode.SRC_IN
+                )
+                firstTimeClickLike = false
+            } else {
+                iv_reaction_like.setColorFilter(
+                    ContextCompat.getColor(
+                        context,
+                        R.color.color_gray
+                    ), android.graphics.PorterDuff.Mode.SRC_IN
+                )
+                firstTimeClickLike = true
+            }
+
+        }
+
+        iv_reaction_unLike.setOnClickListener {
+            mDelegate?.onTapUnlike()
+
+            if (firstTimeClickUnLike) {
+                iv_reaction_unLike.setColorFilter(
+                    ContextCompat.getColor(
+                        context,
+                        R.color.color_pink
+                    ), android.graphics.PorterDuff.Mode.SRC_IN
+                )
+                firstTimeClickUnLike = false
+            } else {
+                iv_reaction_unLike.setColorFilter(
+                    ContextCompat.getColor(
+                        context,
+                        R.color.color_gray
+                    ), android.graphics.PorterDuff.Mode.SRC_IN
+                )
+                firstTimeClickUnLike = true
+            }
+
+        }
+
+        iv_reaction_message.setOnClickListener {
+            mDelegate?.onTapMessage()
+        }
+    }
+
+
+    interface Delegate {
+        fun onTapLike()
+        fun onTapUnlike()
+        fun onTapMessage()
+    }
+
 }

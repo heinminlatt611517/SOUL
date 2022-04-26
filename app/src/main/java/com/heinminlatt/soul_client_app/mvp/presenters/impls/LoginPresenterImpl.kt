@@ -10,7 +10,7 @@ class LoginPresenterImpl : LoginPresenter, AbstractBasePresenter<LoginView>() {
     }
 
     override fun onTapForgotPassword() {
-
+       mView?.navigateToForgotPasswordScreen()
     }
 
     override fun onTapGoogle() {

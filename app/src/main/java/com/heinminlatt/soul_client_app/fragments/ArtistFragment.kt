@@ -1,12 +1,12 @@
 package com.heinminlatt.soul_client_app.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.activities.ArtistCategoryActivity
 import com.heinminlatt.soul_client_app.activities.GroupArtistDetailsActivity
@@ -27,7 +27,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class ArtistFragment : Fragment(),ArtistView {
+class ArtistFragment : BaseFragment(),ArtistView {
 
     private var param1: String? = null
     private var param2: String? = null
@@ -84,14 +84,17 @@ class ArtistFragment : Fragment(),ArtistView {
     private fun setUpActionListener() {
         iv_viewMore_boy.setOnClickListener {
             startActivity(context?.let { it1 -> ArtistCategoryActivity.newIntent(it1, boyGroupArtist) })
+            slideToAnimation()
         }
 
         iv_viewMore_girl.setOnClickListener {
             startActivity(context?.let { it1 -> ArtistCategoryActivity.newIntent(it1, girlGroupArtist) })
+            slideToAnimation()
         }
 
         iv_viewMore_solo_artist.setOnClickListener {
             startActivity(context?.let { it1 -> ArtistCategoryActivity.newIntent(it1, soloGroupArtist) })
+            slideToAnimation()
         }
     }
 
@@ -130,6 +133,7 @@ class ArtistFragment : Fragment(),ArtistView {
 
     override fun navigateToGroupArtistDetailScreen() {
         startActivity(context?.let { it1 -> GroupArtistDetailsActivity.newIntent(it1) })
+        slideToAnimation()
     }
 
     override fun showErrorMessage(errorMessage: String) {

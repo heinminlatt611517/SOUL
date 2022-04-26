@@ -41,6 +41,8 @@ class LoginActivity : BaseActivity() , LoginView {
         tv_register.setOnClickListener { mPresenter.onTapRegister() }
 
         btn_login.setOnClickListener { mPresenter.onTapLogin() }
+
+        tv_forgot_password.setOnClickListener { mPresenter.onTapForgotPassword() }
     }
 
     private fun setUpPresenter() {
@@ -50,15 +52,23 @@ class LoginActivity : BaseActivity() , LoginView {
 
     override fun navigateToUpdateProfileScreen() {
         startActivity(UpdateProfileActivity.newIntent(this))
+        slideToAnimation()
         finish()
     }
 
     override fun navigateToSignUpScreen() {
         startActivity(SignUpActivity.newIntent(this))
+        slideToAnimation()
+        finish()
+    }
+
+    override fun navigateToForgotPasswordScreen() {
+        startActivity(ForgotPasswordActivity.newIntent(this))
+        slideToAnimation()
         finish()
     }
 
     override fun showErrorMessage(errorMessage: String) {
-        TODO("Not yet implemented")
+
     }
 }

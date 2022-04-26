@@ -18,4 +18,9 @@ class EditProfileActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile)
     }
+
+    override fun finish() {
+        super.finish()
+        slideBackAnimation()
+    }
 }

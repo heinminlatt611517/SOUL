@@ -3,11 +3,14 @@
     <string name="str_txt_not_have_account"><font color='#434C62'>You dont have an account??</font> <font color='#fc6103'>Register here</font></string>
     <string name="str_txt_agree_term_and_condition"><font color='#434C62'>Do you agree with our</font> <font color='#fc6103'>terms and condition</font></string>
     <string name="str_txt_already_member"><font color='#434C62'>I am already member</font> <font color='#fc6103'>Sign in</font></string>
+    <string name="str_txt_do_not_receive_email"><font color='#434C62'>Didn’t receive the email? Check your spam filter or</font> <font color='#fc6103'>try another email address</font></string>
+
 
     //hint txt
     <string name="email_hint"><font size="14">Input your email here</font></string>
     <string name="password_hint"><font size="14">Input your password here</font></string>
     <string name="nickname_hint"><font size="14">Input your nickname here</font></string>
+    <string name="str_txt_search_hint"><font size="14">Artists,Videos,News and SOLOs</font></string>
 
     <string name="str_txt_makingTheWorld">Making The World a better place.</string>
     <string name="str_txt_soul_to_you">© 2022 SOUL TO YOU, Inc. All rights reserved.</string>
@@ -89,6 +92,25 @@
     <string name="str_txt_abouts">Abouts</string>
     <string name="str_txt_groupImage">Group Images</string>
     <string name="str_txt_group_artist_about">BTS has taken home two awards at the 2022 iHeartRadio Music Awards, BTS won Best Music Video with “Butter” as well as Best Fan Army. BTS x Nike possible collaboration, BTS Variety Show Run BTS Hiatus and possible return date, BTS Jin Health Update and Military service, Suga Instagram cat,BTS has taken home two awards at the 2022 iHeartRadio Music Awards, BTS won Best Music Video with “Butter” as well as Best Fan Army. BTS x Nike possible collaboration, BTS Variety Show Run BTS Hiatus and possible return date</string>
+    <string name="str_txt_group_artists">Group Artists</string>
+    <string name="str_txt_go_back_login">Go back to Login</string>
+    <string name="str_txt_forgot_content">Enter your email and we we’ll sent you instructions on how to rest your password</string>
+    <string name="str_txt_enter_email">Enter your email here</string>
+    <string name="str_btn_sendInstruction">Send Instructions</string>
+    <string name="str_txt_check_mail">Check your email</string>
+    <string name="str_txt_skip_confirm_later">Skip, I will confirm later</string>
+    <string name="str_btn_open_mail">Open email app</string>
+    <string name="str_txt_enter_email_address">Enter your email address</string>
+    <string name="str_txt_check_mail_content">We have sent a password recover instructions to your email</string>
+    <string name="str_txt_create_new_password">Create new password</string>
+    <string name="str_txt_create_new_pass_content">Your new password must be different from previous used passwords</string>
+    <string name="str_txt_password_at_least">Must be at least 8 characters</string>
+    <string name="str_txt_confirmPassword">Confirm Password</string>
+    <string name="str_txt_password_must_match">Both password must match</string>
+    <string name="str_btn_reset_password">Reset Password</string>
+    <string name="str_txt_successful">Successful!</string>
+    <string name="str_txt_search">Search</string>
+    <string name="str_solo">Solo</string>
 
 
 </resources>

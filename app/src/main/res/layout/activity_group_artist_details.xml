@@ -182,7 +182,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_medium_3"
                         android:layout_marginRight="@dimen/margin_medium_2"
-                        android:src="@drawable/ic_favourite"
+                        android:src="@drawable/ic_favourite_gray"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/vp_group_artist_slider" />
 

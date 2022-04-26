@@ -9,11 +9,27 @@ class HomePresenterImpl : HomePresenter,AbstractBasePresenter<HomeView>() {
 
     }
 
+    override fun onTapSearch() {
+        mView?.navigateToSearchScreen()
+    }
+
     override fun onTapNewsItem() {
         mView?.navigateToNewsDetailScreen()
     }
 
     override fun onTapSoloArtistItem() {
         mView?.navigateToSoloArtistDetailScreen()
+    }
+
+    override fun onTapLike() {
+
+    }
+
+    override fun onTapUnlike() {
+
+    }
+
+    override fun onTapMessage() {
+
     }
 }

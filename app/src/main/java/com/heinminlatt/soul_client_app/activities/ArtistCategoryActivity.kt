@@ -99,4 +99,9 @@ class ArtistCategoryActivity : BaseActivity() {
     private fun changeFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit()
     }
+
+    override fun finish() {
+        super.finish()
+        slideBackAnimation()
+    }
 }

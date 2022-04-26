@@ -12,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOUL.NoActionBar">
-        <activity android:name=".activities.GroupArtistDetailsActivity"></activity>
+        <activity android:name=".activities.SearchActivity"></activity>
+        <activity android:name=".activities.SuccessResetPasswordActivity" />
+        <activity android:name=".activities.CreateNewPasswordActivity" />
+        <activity android:name=".activities.CheckEmailActivity" />
+        <activity android:name=".activities.ForgotPasswordActivity" />
+        <activity android:name=".activities.GroupArtistDetailsActivity" />
         <activity android:name=".activities.SoloArtistDetailsActivity" />
         <activity android:name=".activities.MyFavouriteActivity" />
         <activity android:name=".activities.SettingActivity" />

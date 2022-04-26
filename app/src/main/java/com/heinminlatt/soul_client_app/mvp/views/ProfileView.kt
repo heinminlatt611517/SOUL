@@ -6,4 +6,5 @@ interface ProfileView : BaseView {
     fun navigateToSettingScreen()
     fun navigateToEditProfileScreen()
     fun navigateToMyFavouriteScreen()
+
 }

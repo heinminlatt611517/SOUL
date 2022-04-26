@@ -56,15 +56,18 @@ class SignUpActivity : BaseActivity(),SignUpView {
 
     override fun navigateToLoginScreen() {
         startActivity(LoginActivity.newIntent(this))
+        slideBackAnimation()
         finish()
     }
 
     override fun navigateToSignUpSuccess() {
         startActivity(SignUpSuccessActivity.newIntent(this))
+        slideToAnimation()
         finish()
     }
 
     override fun showErrorMessage(errorMessage: String) {
 
     }
+
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.adapters.AllBoyGroupAdapter
 import com.heinminlatt.soul_client_app.adapters.AllGirlGroupAdapter
@@ -14,7 +15,7 @@ import kotlinx.android.synthetic.main.fragment_girl_group.*
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-class BoyGroupFragment : Fragment() {
+class BoyGroupFragment : BaseFragment() {
 
     private var param1: String? = null
     private var param2: String? = null

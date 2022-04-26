@@ -47,4 +47,9 @@ class NewDetailsActivity : BaseActivity() {
 
         mRelatedNewsAdapter.setNewData(mutableListOf(1, 2, 3,4,5,6))
     }
+
+    override fun finish() {
+        super.finish()
+       slideBackAnimation()
+    }
 }

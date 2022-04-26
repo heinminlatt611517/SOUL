@@ -34,6 +34,18 @@ abstract class BaseActivity : AppCompatActivity() {
         Snackbar.make(window.decorView, message, Snackbar.LENGTH_LONG).show()
     }
 
+     fun slideToAnimation(){
+        overridePendingTransition( R.anim.slide_in, R.anim.slide_out )
+    }
+
+    fun slideBottomToTopAnimation(){
+        overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up)
+    }
+
+     fun slideBackAnimation(){
+        overridePendingTransition( R.anim.slide_enter, R.anim.slide_exit )
+    }
+
      fun addReadMore(text: String, textView: TextView) {
         val ss = SpannableString(text.substring(0, 150) + "... read more")
         val clickableSpan: ClickableSpan = object : ClickableSpan() {

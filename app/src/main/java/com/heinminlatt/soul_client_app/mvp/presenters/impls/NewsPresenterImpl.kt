@@ -18,5 +18,17 @@ class NewsPresenterImpl : NewsPresenter,AbstractBasePresenter<NewsView>() {
     override fun onTapSoloArtistItem() {
     }
 
+    override fun onTapLike() {
+
+    }
+
+    override fun onTapUnlike() {
+
+    }
+
+    override fun onTapMessage() {
+
+    }
+
 
 }

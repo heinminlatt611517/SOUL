@@ -32,4 +32,9 @@ class SettingActivity :BaseActivity() {
             layout_my.setBackgroundColor(resources.getColor(R.color.white))
         }
     }
+
+    override fun finish() {
+        super.finish()
+        slideBackAnimation()
+    }
 }

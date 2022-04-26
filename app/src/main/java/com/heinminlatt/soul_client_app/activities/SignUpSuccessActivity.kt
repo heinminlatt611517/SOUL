@@ -25,7 +25,12 @@ class SignUpSuccessActivity :BaseActivity() {
     private fun setUpActionListener() {
         btn_go_back_login.setOnClickListener {
             startActivity(LoginActivity.newIntent(this))
+            slideBackAnimation()
             finish()
         }
+    }
+
+
+    override fun onBackPressed() {
     }
 }

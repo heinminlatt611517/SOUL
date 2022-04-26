@@ -20,6 +20,8 @@
             android:background="@android:color/white"
             android:layout_height="80dp"
             android:layout_gravity="center"
+            android:paddingLeft="14sp"
+            android:paddingRight="14sp"
             >
 
             <TextView
@@ -30,17 +32,16 @@
                 android:textSize="20sp"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:paddingLeft="14dp"
                 />
 
             <ImageView
                 android:id="@+id/iv_search"
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:scaleType="centerCrop"
-                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_search_foreground"/>
+                android:src="@drawable/ic_search"/>
 
             <TextView
                 android:layout_width="match_parent"

@@ -5,5 +5,6 @@ import com.heinminlatt.shared.mvp.view.BaseView
 interface LoginView : BaseView {
     fun  navigateToUpdateProfileScreen()
     fun  navigateToSignUpScreen()
+    fun  navigateToForgotPasswordScreen()
 
 }

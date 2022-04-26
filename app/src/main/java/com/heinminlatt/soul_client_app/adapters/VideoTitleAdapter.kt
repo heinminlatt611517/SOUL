@@ -30,11 +30,11 @@ class VideoTitleAdapter  : BaseRecyclerAdapter<BaseViewHolder<String>,String>() 
         }
 
         if(position==row_index) {
-            holder.itemView.cv_news_title.setBackgroundColor(Color.parseColor("#2CB9C1"))
+            holder.itemView.cv_news_title.setBackgroundResource(R.drawable.bg_rounded_corner_blue)
             holder.itemView.tv_news_title.setTextColor(Color.parseColor("#ffffff"))
         }
         else{
-            holder.itemView.cv_news_title.setBackgroundColor(Color.parseColor("#F7F7F7"))
+            holder.itemView.cv_news_title.setBackgroundResource(R.drawable.bg_rounded_corner)
             holder.itemView.tv_news_title.setTextColor(Color.parseColor("#A1A6AD"))
         }
         Log.d("","$msg")

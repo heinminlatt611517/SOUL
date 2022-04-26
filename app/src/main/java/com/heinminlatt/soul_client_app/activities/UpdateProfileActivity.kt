@@ -3,13 +3,11 @@ package com.heinminlatt.soul_client_app.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import com.hbb20.CountryCodePicker
 import com.heinminlatt.shared.activity.BaseActivity
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.mvp.presenters.UpdateProfilePresenter
-import com.heinminlatt.soul_client_app.mvp.presenters.impls.LoginPresenterImpl
 import com.heinminlatt.soul_client_app.mvp.presenters.impls.UpdateProfilePresenterImpl
 import com.heinminlatt.soul_client_app.mvp.views.UpdateProfileView
 import kotlinx.android.synthetic.main.activity_update_profile.*
@@ -44,13 +42,11 @@ class UpdateProfileActivity : BaseActivity(), CountryCodePicker.OnCountryChangeL
         country_code_picker!!.setOnCountryChangeListener(this)
 
         btn_let_rock.setOnClickListener {
-            startActivity(MainActivity.newIntent(this))
-            finish()
+            mPresenter.onTapLetRock()
         }
 
         tv_skip.setOnClickListener {
-            startActivity(MainActivity.newIntent(this))
-            finish()
+            mPresenter.onTapSkip()
         }
 
     }
@@ -58,15 +54,16 @@ class UpdateProfileActivity : BaseActivity(), CountryCodePicker.OnCountryChangeL
     override fun onCountrySelected() {
         countryCode=country_code_picker!!.selectedCountryCode
         countryName=country_code_picker!!.selectedCountryName
-
-        //Toast.makeText(this, "Country Code$countryCode",Toast.LENGTH_LONG).show()
     }
 
     override fun navigateToMainScreen() {
-
+        startActivity(MainActivity.newIntent(this))
+        slideToAnimation()
+        finish()
     }
 
     override fun showErrorMessage(errorMessage: String) {
 
     }
+
 }

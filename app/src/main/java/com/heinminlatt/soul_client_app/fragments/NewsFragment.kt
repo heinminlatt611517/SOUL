@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.activities.NewDetailsActivity
 import com.heinminlatt.soul_client_app.adapters.NewsAdapter
@@ -25,7 +26,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class NewsFragment : Fragment(),NewsView {
+class NewsFragment : BaseFragment(),NewsView {
 
     private var param1: String? = null
     private var param2: String? = null
@@ -103,11 +104,14 @@ class NewsFragment : Fragment(),NewsView {
 
     override fun navigateToNewsDetailScreen() {
         startActivity(context?.let { it1 -> NewDetailsActivity.newIntent(it1) })
+        slideToAnimation()
     }
 
     override fun showErrorMessage(errorMessage: String) {
 
     }
+
+
 
 
 }

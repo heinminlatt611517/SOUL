@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
+import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.activities.EditProfileActivity
 import com.heinminlatt.soul_client_app.activities.MyFavouriteActivity
@@ -20,7 +21,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class AccountFragment : Fragment() ,ProfileView{
+class AccountFragment : BaseFragment() ,ProfileView{
 
     private var param1: String? = null
     private var param2: String? = null
@@ -84,14 +85,17 @@ class AccountFragment : Fragment() ,ProfileView{
 
     override fun navigateToSettingScreen() {
         startActivity(context?.let { it1 -> SettingActivity.newIntent(it1) })
+        slideToAnimation()
     }
 
     override fun navigateToEditProfileScreen() {
         startActivity(context?.let { it1 -> EditProfileActivity.newIntent(it1) })
+       slideToAnimation()
     }
 
     override fun navigateToMyFavouriteScreen() {
         startActivity(context?.let { it1 -> MyFavouriteActivity.newIntent(it1) })
+        slideToAnimation()
     }
 
     override fun showErrorMessage(errorMessage: String) {

@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.item_news_tiltle.view.*
 class NewsTitleAdapter (delegate: HomeScreenItemDelegate) : BaseRecyclerAdapter<BaseViewHolder<String>,String>() {
 
     var mDelegate = delegate
-    var row_index = 0
+    var rowIndex = 0
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<String> {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_news_tiltle, parent, false)
@@ -24,18 +24,19 @@ class NewsTitleAdapter (delegate: HomeScreenItemDelegate) : BaseRecyclerAdapter<
 
     override fun onBindViewHolder(holder: BaseViewHolder<String>, position: Int) {
         var msg = mData[position]
-        holder.itemView.tv_news_title.text = msg;
+        holder.itemView.tv_news_title.text = msg
         holder.itemView.cv_news_title.setOnClickListener {
-           row_index = position
+           rowIndex = position
             notifyDataSetChanged()
         }
 
-        if(position==row_index) {
-            holder.itemView.cv_news_title.setBackgroundColor(Color.parseColor("#2CB9C1"))
+        if(position==rowIndex) {
+            holder.itemView.cv_news_title.setBackgroundResource(R.drawable.bg_rounded_corner_blue)
             holder.itemView.tv_news_title.setTextColor(Color.parseColor("#ffffff"))
+
         }
         else{
-            holder.itemView.cv_news_title.setBackgroundColor(Color.parseColor("#F7F7F7"))
+            holder.itemView.cv_news_title.setBackgroundResource(R.drawable.bg_rounded_corner)
             holder.itemView.tv_news_title.setTextColor(Color.parseColor("#A1A6AD"))
         }
         Log.d("","$msg")

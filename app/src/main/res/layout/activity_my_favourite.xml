@@ -9,48 +9,240 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_width="wrap_content"
-        android:background="@android:color/white"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        >
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="14dp"
             android:src="@drawable/ic_left_arrow"
             android:textSize="20sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:paddingLeft="14dp"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_favourite"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
             android:text="@string/str_txt_myFavourite"
             android:textColor="@color/text_color"
             android:textSize="20sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="true"
-            />
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/iv_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_combined_shape"
             android:layout_alignTop="@+id/tv_favourite"
+            android:layout_alignBottom="@+id/tv_favourite"
+            android:layout_alignParentEnd="true"
             android:paddingRight="14dp"
-            android:layout_alignBottom="@+id/tv_favourite"/>
+            android:src="@drawable/ic_combined_shape" />
 
     </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:background="@color/white"
+        android:paddingTop="@dimen/margin_medium_2"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_medium_2"
+
+            android:paddingBottom="@dimen/margin_large">
+
+            <RelativeLayout
+                android:id="@+id/layout_news"
+                android:layout_width="145dp"
+                android:layout_height="56dp"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@drawable/gradient_stroke_color"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_news" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_toRightOf="@+id/iv_news"
+                    android:gravity="center"
+                    android:text="@string/str_news"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_news_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_video"
+                android:layout_width="145dp"
+                android:layout_height="56dp"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@drawable/fav_bg_rounded_corner_gray"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_utube" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_toRightOf="@+id/iv_video"
+                    android:gravity="center"
+                    android:text="@string/str_txt_video"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_video_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_group_artist"
+                android:layout_width="187dp"
+                android:layout_height="56dp"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@drawable/fav_bg_rounded_corner_gray"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_group_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_news" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_toRightOf="@+id/iv_group_artist"
+                    android:gravity="center"
+                    android:text="@string/str_txt_group_artists"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_group_artist_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_solo_artist"
+                android:layout_width="145dp"
+                android:layout_height="56dp"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@drawable/fav_bg_rounded_corner_gray"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <ImageView
+                    android:id="@+id/iv_solo_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/iv_solo_artist" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_toRightOf="@+id/iv_solo_artist"
+                    android:gravity="center"
+                    android:text="@string/str_txt_solo_artist"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        >
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
