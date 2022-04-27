@@ -23,7 +23,8 @@
             android:paddingLeft="14dp"
             android:src="@drawable/ic_left_arrow"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:id="@+id/iv_back_favourite"/>
 
         <TextView
             android:id="@+id/tv_favourite"
@@ -45,7 +46,7 @@
             android:layout_alignBottom="@+id/tv_favourite"
             android:layout_alignParentEnd="true"
             android:paddingRight="14dp"
-            android:src="@drawable/ic_combined_shape" />
+            android:src="@drawable/ic_combined_shape_favourite" />
 
     </RelativeLayout>
 

@@ -26,15 +26,17 @@
             android:src="@drawable/user"
             android:background="@drawable/circle_bg_gray"/>
 
-        <ImageView
-            android:id="@+id/iv_quiz"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/cup_animationView"
+            android:layout_width="25dp"
+            android:layout_height="38dp"
+            app:lottie_rawRes="@raw/cup"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
             app:layout_constraintEnd_toStartOf="@+id/cv_search"
             app:layout_constraintTop_toTopOf="@+id/cv_favourite"
-            app:layout_constraintBottom_toBottomOf="@+id/cv_favourite"
-            android:background="@drawable/ic_quiz"
-            />
+            app:layout_constraintBottom_toBottomOf="@+id/cv_favourite"/>
+
 
         <TextView
             android:id="@+id/tv_userName"
@@ -61,7 +63,6 @@
                 android:id="@+id/iv_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="fitXY"
                 android:layout_marginLeft="@dimen/margin_medium_2"
                 android:layout_marginRight="@dimen/margin_medium_2"
                 android:src="@drawable/ic_search"/>
@@ -71,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cv_favourite"
-            android:elevation="0dp"
+            app:cardElevation="0dp"
             android:clickable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

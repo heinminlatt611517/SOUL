@@ -33,7 +33,12 @@
     <color name="color_rating">#FAE52A</color>
     <color name="color_gray_lighter">#D1D4D6</color>
 
+    <color name="color_main_quiz">#40D1DB</color>
+    
     <color name="color_gray_light1">#F7F7F7</color>
+
+    <color name="color_btn_quiz">#0A2942</color>
+    <color name="color_score_board_bg">#0A2942</color>
 
 
 

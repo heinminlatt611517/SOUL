@@ -6,6 +6,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
 import com.heinminlatt.soul_client_app.R
+import kotlinx.android.synthetic.main.item_solo_video.view.*
 import kotlinx.android.synthetic.main.view_pod_reaction.view.*
 import kotlinx.android.synthetic.main.view_pod_subscriber.view.*
 
@@ -85,6 +86,10 @@ class ReactionViewPod @JvmOverloads constructor(
         iv_reaction_message.setOnClickListener {
             mDelegate?.onTapMessage()
         }
+
+        iv_reaction_more_vest.setOnClickListener {
+            mDelegate?.onTapMoreVest()
+        }
     }
 
 
@@ -92,6 +97,7 @@ class ReactionViewPod @JvmOverloads constructor(
         fun onTapLike()
         fun onTapUnlike()
         fun onTapMessage()
+        fun onTapMoreVest()
     }
 
 }

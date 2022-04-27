@@ -10,6 +10,7 @@ import com.heinminlatt.soul_client_app.fragments.MyFavouriteGroupArtistFragment
 import com.heinminlatt.soul_client_app.fragments.MyFavouriteNewsFragment
 import com.heinminlatt.soul_client_app.fragments.MyFavouriteSoloArtistFragment
 import com.heinminlatt.soul_client_app.fragments.MyFavouriteVideoFragment
+import kotlinx.android.synthetic.main.activity_create_new_password.*
 import kotlinx.android.synthetic.main.activity_my_favourite.*
 
 class MyFavouriteActivity : BaseActivity() {
@@ -29,6 +30,11 @@ class MyFavouriteActivity : BaseActivity() {
     }
 
     private fun setUpActionListener() {
+
+        iv_back_favourite.setOnClickListener {
+            slideBackAnimation()
+            finish()
+        }
 
         layout_news.setOnClickListener {
             layout_news.setBackgroundResource(R.drawable.gradient_stroke_color)
@@ -71,8 +77,8 @@ class MyFavouriteActivity : BaseActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit()
     }
 
-    override fun finish() {
-        super.finish()
-       slideBackAnimation()
+    override fun onBackPressed() {
+        super.onBackPressed()
+        slideBackAnimation()
     }
 }

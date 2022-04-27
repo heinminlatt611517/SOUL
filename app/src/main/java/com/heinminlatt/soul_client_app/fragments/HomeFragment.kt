@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
+import com.heinminlatt.soul_client_app.activities.MainQuizActivity
 import com.heinminlatt.soul_client_app.activities.NewDetailsActivity
 import com.heinminlatt.soul_client_app.activities.SearchActivity
 import com.heinminlatt.soul_client_app.activities.SoloArtistDetailsActivity
@@ -23,6 +23,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.home_news_layout.*
 import kotlinx.android.synthetic.main.home_search_layout.*
 import kotlinx.android.synthetic.main.home_solo_artist_layout.*
+import kotlinx.android.synthetic.main.home_videos_layout.*
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -59,6 +60,7 @@ class HomeFragment : BaseFragment() , HomeView{
     private lateinit var mSoloArtistAdapter: SoloArtistAdapter
     private lateinit var mNewsTitleAdapter: NewsTitleAdapter
     private lateinit var mNewsAdapter: NewsAdapter
+    private lateinit var mHomeVideoAdapter: HomeVideoAdapter
 
     //presenter
     private lateinit var mHomePresenter : HomePresenter
@@ -86,6 +88,10 @@ class HomeFragment : BaseFragment() , HomeView{
         iv_search.setOnClickListener {
             mHomePresenter.onTapSearch()
         }
+
+        cup_animationView.setOnClickListener {
+            mHomePresenter.onTapQuiz()
+        }
     }
 
     private fun startImageAnimation() {
@@ -93,7 +99,7 @@ class HomeFragment : BaseFragment() , HomeView{
             context,
             R.anim.bottom_to_original
         )
-        iv_quiz.animation = animation
+        //iv_quiz.animation = animation
     }
 
 
@@ -133,7 +139,14 @@ class HomeFragment : BaseFragment() , HomeView{
         mNewsAdapter = NewsAdapter(mHomePresenter)
         rv_news.adapter = mNewsAdapter
 
-        mNewsAdapter.setNewData(mutableListOf(1, 2, 3, 4, 5, 6, 7, 8))
+        mNewsAdapter.setNewData(mutableListOf(1, 2, 3, 4))
+
+        //video recycler view
+        rv_videos.layoutManager =
+            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        mHomeVideoAdapter = HomeVideoAdapter()
+        rv_videos.adapter = mHomeVideoAdapter
+        mHomeVideoAdapter.setNewData(mutableListOf(1, 2, 3, 4))
 
     }
 
@@ -155,7 +168,21 @@ class HomeFragment : BaseFragment() , HomeView{
 
     override fun navigateToSearchScreen() {
         startActivity(context?.let { it1 -> SearchActivity.newIntent(it1) })
-        activity?.overridePendingTransition( R.anim.slide_from_top, R.anim.slide_in_top )
+        slideTopToBottomAnimation()
+    }
+
+    override fun showBottomSheetFragment() {
+        val bottomSheetDialogFragment=BottomSheetFragment()
+        activity?.supportFragmentManager?.let { it -> bottomSheetDialogFragment.show(
+            it,
+            bottomSheetDialogFragment.tag
+        )
+        }
+    }
+
+    override fun navigateToMainQuizScreen() {
+        startActivity(context?.let { it1 -> MainQuizActivity.newIntent(it1) })
+        slideBottomToTopAnimation()
     }
 
     override fun showErrorMessage(errorMessage: String) {

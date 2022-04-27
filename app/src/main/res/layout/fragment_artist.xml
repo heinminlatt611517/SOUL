@@ -86,11 +86,11 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <include
+                layout="@layout/artist_boy_group_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginTop="6dp"
-                layout="@layout/artist_boy_group_layout"/>
+                android:layout_marginTop="6dp" />
 
             <include
                 android:layout_width="match_parent"

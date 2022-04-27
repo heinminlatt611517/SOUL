@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.heinminlatt.soul_client_app.views.viewPods.EmptyViewPod
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivEmptyImage"
+        android:layout_width="160dp"
+        android:layout_centerInParent="true"
+        android:layout_height="160dp"
+        android:src="@drawable/empty"/>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:text="There is no data"
+        android:layout_below="@id/ivEmptyImage"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnTryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Try Again"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/tvEmpty"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+</com.heinminlatt.soul_client_app.views.viewPods.EmptyViewPod>

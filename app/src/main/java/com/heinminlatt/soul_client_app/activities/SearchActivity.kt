@@ -130,7 +130,7 @@ class SearchActivity : BaseActivity() {
 
     override fun finish() {
         super.finish()
-        overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up)
+        slideBottomToTopAnimation()
     }
 
 

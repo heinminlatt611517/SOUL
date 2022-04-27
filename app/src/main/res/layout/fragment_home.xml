@@ -77,6 +77,13 @@
                     android:layout_gravity="left"
                     android:layout_marginTop="6dp" />
 
+                <include
+                    layout="@layout/home_videos_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="6dp" />
+
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>

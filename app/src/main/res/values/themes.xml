@@ -42,4 +42,9 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+
+    <style name="NoBackgroundDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@null</item>
+    </style>
+
 </resources>

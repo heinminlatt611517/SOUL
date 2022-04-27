@@ -38,6 +38,10 @@ abstract class BaseActivity : AppCompatActivity() {
         overridePendingTransition( R.anim.slide_in, R.anim.slide_out )
     }
 
+    fun slideTopToBottomAnimation(){
+        overridePendingTransition( R.anim.slide_from_top, R.anim.slide_in_top )
+    }
+
     fun slideBottomToTopAnimation(){
         overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up)
     }

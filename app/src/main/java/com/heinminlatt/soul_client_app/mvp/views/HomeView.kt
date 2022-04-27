@@ -6,4 +6,6 @@ interface HomeView : BaseView {
     fun navigateToNewsDetailScreen()
     fun navigateToSoloArtistDetailScreen()
     fun navigateToSearchScreen()
+    fun showBottomSheetFragment()
+    fun navigateToMainQuizScreen()
 }

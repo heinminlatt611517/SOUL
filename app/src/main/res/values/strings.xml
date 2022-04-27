@@ -111,6 +111,17 @@
     <string name="str_txt_successful">Successful!</string>
     <string name="str_txt_search">Search</string>
     <string name="str_solo">Solo</string>
+    <string name="str_txt_viewDetails">View Details</string>
+    <string name="str_txt_saveFavourite">Save to Favourites</string>
+    <string name="str_txt_fan_quiz">FAN QUIZZES</string>
+    <string name="str_txt_quick_content">Now prove to your friends that you are a real KPOP FAN</string>
+    <string name="str_txt_yourScore">Your scores:</string>
+    <string name="str_btn_answer">Answer</string>
+    <string name="str_btn_start_quiz">START QUIZZE</string>
+    <string name="str_txt_name">Name</string>
+    <string name="str_txt_rank">Rank</string>
+    <string name="str_txt_score">Scores</string>
+    <string name="str_txt_i_give_up"><u>I give up!</u></string>
 
 
 </resources>

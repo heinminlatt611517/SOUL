@@ -21,8 +21,8 @@
             android:src="@drawable/kpop_img"
             android:backgroundTint="@color/app_color"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularBorder"
-            app:strokeColor="@color/white"
-            android:padding="2dp"
+            app:strokeColor="@color/color_gray_lighter"
+            android:padding="6dp"
             app:strokeWidth="4dp" />
 
         <TextView

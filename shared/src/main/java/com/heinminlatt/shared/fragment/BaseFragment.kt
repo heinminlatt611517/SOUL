@@ -15,4 +15,15 @@ abstract class BaseFragment : Fragment() {
         activity?.overridePendingTransition( R.anim.slide_enter, R.anim.slide_exit )
     }
 
+    fun slideTopToBottomAnimation(){
+        activity?.overridePendingTransition( R.anim.slide_from_top, R.anim.slide_in_top )
+    }
+
+    fun slideBottomToTopAnimation(){
+        activity?.overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up)
+    }
+
+
+
+
 }

@@ -13,6 +13,10 @@ class HomePresenterImpl : HomePresenter,AbstractBasePresenter<HomeView>() {
         mView?.navigateToSearchScreen()
     }
 
+    override fun onTapQuiz() {
+        mView?.navigateToMainQuizScreen()
+    }
+
     override fun onTapNewsItem() {
         mView?.navigateToNewsDetailScreen()
     }
@@ -31,5 +35,9 @@ class HomePresenterImpl : HomePresenter,AbstractBasePresenter<HomeView>() {
 
     override fun onTapMessage() {
 
+    }
+
+    override fun onTapMoreVest() {
+        mView?.showBottomSheetFragment()
     }
 }

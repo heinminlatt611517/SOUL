@@ -30,5 +30,9 @@ class NewsPresenterImpl : NewsPresenter,AbstractBasePresenter<NewsView>() {
 
     }
 
+    override fun onTapMoreVest() {
+
+    }
+
 
 }

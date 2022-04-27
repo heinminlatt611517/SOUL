@@ -50,6 +50,9 @@ dependencies {
     //indicator
     implementation 'com.tbuonomo:dotsindicator:4.2'
 
+    //lottie animation
+    implementation "com.airbnb.android:lottie:3.4.0"
+
 
 
     // App dependencies

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tv_videos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_txt_video"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginLeft="@dimen/margin_medium_2"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_viewMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_txt_viewMore"
+        android:textSize="14sp"
+        android:layout_marginRight="@dimen/margin_medium_2"
+        android:textColor="@color/color_view_more"
+        app:layout_constraintTop_toTopOf="@+id/tv_videos"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_videos"
+        app:layout_constraintEnd_toStartOf="@+id/iv_viewMore_video"/>
+
+    <ImageView
+        android:id="@+id/iv_viewMore_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_medium_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_videos"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_videos"
+        android:src="@drawable/ic_right_arrow"/>
+
+
+        <ImageView
+            android:id="@+id/iv_rtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_left_arrow"
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_videos"
+            app:layout_constraintEnd_toStartOf="@+id/iv_ltr"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_large"
+            android:background="@drawable/ic_oval_gray_bg"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            tools:ignore="NewApi"
+            android:clickable="true"/>
+
+
+    <ImageView
+        android:id="@+id/iv_ltr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:clickable="true"
+        android:layout_marginRight="@dimen/margin_medium_2"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:src="@drawable/ic_ritht_arrow_blue_dark"
+        android:background="@drawable/ic_oval_gray_bg"
+        app:layout_constraintTop_toBottomOf="@+id/tv_videos"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="NewApi" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_videos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:paddingStart="@dimen/margin_medium_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_ltr"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
