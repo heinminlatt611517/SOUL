@@ -59,19 +59,119 @@
         android:padding="@dimen/margin_medium_2"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-                android:src="@drawable/ic_scoreboard_gradient_bg"
-                android:scaleType="fitXY"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:background="@drawable/left_bottom_and_right_bottom_radius">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@+id/iv_firstPriceUser"
+                        app:layout_constraintEnd_toEndOf="@id/iv_firstPriceUser"
+                        app:layout_constraintBottom_toTopOf="@+id/iv_firstPriceUser"
+                        android:src="@drawable/ic_first_price"
+                        />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_firstPriceUser"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/kpop_img"
+                        android:backgroundTint="@color/app_color"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularBorder"
+                        app:strokeColor="@color/color_gray_lighter"
+                        android:padding="6dp"
+                        app:strokeWidth="4dp"
+                        app:layout_constraintStart_toStartOf="@+id/iv_firstPrice"
+                        app:layout_constraintEnd_toEndOf="@id/iv_firstPrice"
+                        app:layout_constraintBottom_toTopOf="@+id/iv_firstPrice"
+                        app:layout_constraintTop_toTopOf="@+id/iv_firstPrice"/>
+
+                    <ImageView
+                        android:id="@+id/iv_firstPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/ic_first_price_rectangle"/>
+
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@+id/iv_thirdPriceUser"
+                        app:layout_constraintEnd_toEndOf="@id/iv_thirdPriceUser"
+                        app:layout_constraintBottom_toTopOf="@+id/iv_thirdPriceUser"
+                        android:src="@drawable/ic_third_price"
+                        android:layout_marginBottom="2dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_thirdPriceUser"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/user"
+                        android:background="@drawable/circle_bg_gray"
+                        app:layout_constraintStart_toStartOf="@+id/iv_thirdPrice"
+                        app:layout_constraintEnd_toEndOf="@id/iv_thirdPrice"
+                        app:layout_constraintBottom_toTopOf="@+id/iv_thirdPrice"
+                        app:layout_constraintTop_toTopOf="@+id/iv_thirdPrice"/>
+                    <ImageView
+                        android:id="@+id/iv_secondPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_second_price_rectangle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:paddingLeft="@dimen/margin_medium_2"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@+id/iv_secondPriceUser"
+                        app:layout_constraintEnd_toEndOf="@id/iv_secondPriceUser"
+                        app:layout_constraintBottom_toTopOf="@+id/iv_secondPriceUser"
+                        android:src="@drawable/ic_second_price"
+                        android:layout_marginBottom="2dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_secondPriceUser"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/user"
+                        android:background="@drawable/circle_bg_gray"
+                        app:layout_constraintStart_toStartOf="@+id/iv_secondPrice"
+                        app:layout_constraintEnd_toEndOf="@id/iv_secondPrice"
+                        app:layout_constraintBottom_toTopOf="@+id/iv_secondPrice"
+                        app:layout_constraintTop_toTopOf="@+id/iv_secondPrice"/>
+                    <ImageView
+                        android:id="@+id/iv_thirdPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:paddingRight="@dimen/margin_medium_2"
+                        android:src="@drawable/ic_third_price_rectangle"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-            android:background="@drawable/ic_scoreboard_small_gradient_bg"
+            android:background="@drawable/left_bottom_and_right_bottom_gradient_radius"
             android:scaleType="fitXY">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_scoreboardWinner"

@@ -163,7 +163,11 @@
         android:textColor="@color/color_view_more"
         app:layout_constraintBottom_toTopOf="@+id/btn_answer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        tools:ignore="NewApi" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_answer"
@@ -173,12 +177,14 @@
         android:layout_marginTop="@dimen/margin_xxlarge"
         android:layout_marginRight="@dimen/margin_medium_2"
         android:layout_marginBottom="@dimen/margin_medium_2"
-        android:backgroundTint="@color/text_color"
+        android:backgroundTint="@color/color_gray_light"
         android:padding="16dp"
         android:text="@string/str_btn_answer"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:cornerRadius="12dp"
+        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 

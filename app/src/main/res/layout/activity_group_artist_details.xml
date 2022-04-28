@@ -282,6 +282,18 @@
 
                     </LinearLayout>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_color"
+                    android:paddingTop="@dimen/margin_large"
+                    android:paddingBottom="@dimen/margin_large">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_ads_bg"/>
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"

@@ -8,11 +8,12 @@ import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.views.viewHolders.AllGirlGroupViewHolder
 import com.heinminlatt.soul_client_app.views.viewHolders.ArtistBoyViewHolder
 import com.heinminlatt.soul_client_app.views.viewHolders.SoloArtistViewHolder
+import com.heinminlatt.soul_client_app.views.viewHolders.VideoDetailCommentViewHolder
 
 class VideoDetailCommentAdapter : BaseRecyclerAdapter<BaseViewHolder<Int>,Int>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<Int> {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_news_detail_comment, parent, false)
-        return AllGirlGroupViewHolder(view)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_video_detail_comment, parent, false)
+        return VideoDetailCommentViewHolder(view)
     }
 }

@@ -14,7 +14,7 @@ class MyFavouriteNewsAdapter (delegate : MyFavouriteScreenItemDelegate) : BaseRe
     private val mDelegate = delegate
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<Int> {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_news, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_my_favourite_news, parent, false)
         return MyFavouriteNewsViewHolder(view,mDelegate)
     }
 }

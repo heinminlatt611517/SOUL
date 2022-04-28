@@ -6,8 +6,8 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.activity.BaseActivity
 import com.heinminlatt.soul_client_app.R
-import com.heinminlatt.soul_client_app.adapters.NewsDetailCommentAdapter
 import com.heinminlatt.soul_client_app.adapters.RelatedNewsAdapter
+import com.heinminlatt.soul_client_app.bottomSheetDialogFragments.NewsCommentBottomSheetFragment
 import kotlinx.android.synthetic.main.activity_new_details.*
 
 class NewDetailsActivity : BaseActivity() {
@@ -20,7 +20,7 @@ class NewDetailsActivity : BaseActivity() {
     }
 
 
-    private lateinit var mNewsDetailCommentAdapter: NewsDetailCommentAdapter
+
     private lateinit var mRelatedNewsAdapter: RelatedNewsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,17 +28,21 @@ class NewDetailsActivity : BaseActivity() {
         setContentView(R.layout.activity_new_details)
 
         setUpRecyclerView()
+        setUpActionListener()
+    }
+
+    private fun setUpActionListener() {
+        iv_viewMoreComment.setOnClickListener {
+            val bottomSheetDialogFragment= NewsCommentBottomSheetFragment()
+            this.supportFragmentManager.let { it -> bottomSheetDialogFragment.show(
+                    it,
+                    bottomSheetDialogFragment.tag
+            )
+            }
+        }
     }
 
     private fun setUpRecyclerView() {
-        //comment recycler view
-        rv_news_detail_comment.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        mNewsDetailCommentAdapter = NewsDetailCommentAdapter()
-        rv_news_detail_comment.adapter = mNewsDetailCommentAdapter
-
-        mNewsDetailCommentAdapter.setNewData(mutableListOf(1, 2))
-
         //related news recycler view
         rv_news_detail_related.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

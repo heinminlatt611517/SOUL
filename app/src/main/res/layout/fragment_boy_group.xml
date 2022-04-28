@@ -1,47 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/app_color"
-    android:layout_marginTop="@dimen/margin_medium"
-    tools:context=".fragments.BoyGroupFragment">
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_top_girl_group"
+    android:fillViewport="true"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        android:padding="@dimen/margin_medium_2"
-        />
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/app_color"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingBottom="@dimen/margin_medium_2"
+        tools:context=".fragments.BoyGroupFragment">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:layout_marginTop="6dp"
-        android:padding="@dimen/margin_medium_2"
-        app:layout_constraintTop_toBottomOf="@+id/rv_top_girl_group"
-        >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/str_txt_all_boy_group"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"/>
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_all_girl_group"
-            android:layout_marginTop="12dp"
+            android:id="@+id/rv_top_girl_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/margin_medium_2"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/margin_medium_2"
             />
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="6dp"
+            android:id="@+id/linearLayout"
+            android:padding="@dimen/margin_medium_2"
+            app:layout_constraintTop_toBottomOf="@+id/rv_top_girl_group"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_txt_all_boy_group"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_all_girl_group"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_medium"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:layout_marginBottom="@dimen/margin_large">
+            <ImageView
+                android:id="@+id/iv_ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_small_ads" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

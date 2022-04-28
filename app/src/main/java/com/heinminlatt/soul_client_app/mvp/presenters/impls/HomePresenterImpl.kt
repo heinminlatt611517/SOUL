@@ -17,6 +17,10 @@ class HomePresenterImpl : HomePresenter,AbstractBasePresenter<HomeView>() {
         mView?.navigateToMainQuizScreen()
     }
 
+    override fun onTapFavourite() {
+        mView?.navigateToMyFavouriteScreen()
+    }
+
     override fun onTapNewsItem() {
         mView?.navigateToNewsDetailScreen()
     }

@@ -562,12 +562,21 @@
                             android:textSize="16sp" />
                     </LinearLayout>
 
+                    <ImageView
+                        android:id="@+id/iv_ads"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_ads_bg"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        app:layout_constraintTop_toBottomOf="@+id/layout_mbti"/>
+
                     <include
                         android:id="@+id/layout_solo_image"
                         layout="@layout/artist_solo_image_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:layout_constraintTop_toBottomOf="@+id/layout_mbti" />
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_ads" />
 
                     <LinearLayout
                         android:layout_width="match_parent"

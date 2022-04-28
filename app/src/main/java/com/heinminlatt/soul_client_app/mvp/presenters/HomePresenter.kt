@@ -8,4 +8,5 @@ interface HomePresenter : BasePresenter<HomeView>,HomeScreenItemDelegate{
     fun onUiReady()
     fun onTapSearch()
     fun onTapQuiz()
+    fun onTapFavourite()
 }

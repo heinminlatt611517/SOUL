@@ -7,26 +7,31 @@ import android.view.ViewGroup
 import com.heinminlatt.shared.adapter.BaseRecyclerAdapter
 import com.heinminlatt.shared.views.viewHolders.BaseViewHolder
 import com.heinminlatt.soul_client_app.R
+import com.heinminlatt.soul_client_app.delegate.StartQuizScreenItemDelegate
 import com.heinminlatt.soul_client_app.views.viewHolders.*
 import kotlinx.android.synthetic.main.item_news_tiltle.view.*
 import kotlinx.android.synthetic.main.item_quiz_question.view.*
 
-class QuizQuestionAdapter : BaseRecyclerAdapter<BaseViewHolder<Int>,Int>() {
+class QuizQuestionAdapter(delegate : StartQuizScreenItemDelegate) : BaseRecyclerAdapter<BaseViewHolder<String>,String>() {
+    private val mDelegate  = delegate
+    var rowIndex = -1
 
-    var rowIndex = 0
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<Int> {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<String> {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_quiz_question, parent, false)
         return QuizQuestionViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: BaseViewHolder<Int>, position: Int) {
+
+    override fun onBindViewHolder(holder: BaseViewHolder<String>, position: Int) {
         super.onBindViewHolder(holder, position)
 
+        var questionLists = mData[position]
+        holder.itemView.tv_quiz_question.text = questionLists
         holder.itemView.cv_quiz.setOnClickListener {
             rowIndex = position
             notifyDataSetChanged()
+            mDelegate.onTapQuizQuestionItem(questionLists)
         }
 
         if(position==rowIndex) {

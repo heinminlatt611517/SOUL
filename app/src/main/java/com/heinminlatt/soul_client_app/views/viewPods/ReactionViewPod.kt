@@ -38,6 +38,7 @@ class ReactionViewPod @JvmOverloads constructor(
 
     private fun setUpListener() {
         iv_reaction_like.setOnClickListener {
+            firstTimeClickUnLike = true
             mDelegate?.onTapLike()
 
             if (firstTimeClickLike) {
@@ -47,20 +48,30 @@ class ReactionViewPod @JvmOverloads constructor(
                         R.color.color_pink
                     ), android.graphics.PorterDuff.Mode.SRC_IN
                 )
+
+                iv_reaction_unLike.setColorFilter(
+                        ContextCompat.getColor(
+                                context,
+                                R.color.color_gray_light
+                        ), android.graphics.PorterDuff.Mode.SRC_IN
+                )
+
                 firstTimeClickLike = false
             } else {
                 iv_reaction_like.setColorFilter(
                     ContextCompat.getColor(
                         context,
-                        R.color.color_gray
+                        R.color.color_gray_light
                     ), android.graphics.PorterDuff.Mode.SRC_IN
                 )
+
                 firstTimeClickLike = true
             }
 
         }
 
         iv_reaction_unLike.setOnClickListener {
+            firstTimeClickLike = true
             mDelegate?.onTapUnlike()
 
             if (firstTimeClickUnLike) {
@@ -70,12 +81,20 @@ class ReactionViewPod @JvmOverloads constructor(
                         R.color.color_pink
                     ), android.graphics.PorterDuff.Mode.SRC_IN
                 )
+
+                iv_reaction_like.setColorFilter(
+                        ContextCompat.getColor(
+                                context,
+                                R.color.color_gray_light
+                        ), android.graphics.PorterDuff.Mode.SRC_IN
+                )
+
                 firstTimeClickUnLike = false
             } else {
                 iv_reaction_unLike.setColorFilter(
                     ContextCompat.getColor(
                         context,
-                        R.color.color_gray
+                        R.color.color_gray_light
                     ), android.graphics.PorterDuff.Mode.SRC_IN
                 )
                 firstTimeClickUnLike = true

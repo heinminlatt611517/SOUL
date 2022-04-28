@@ -8,4 +8,5 @@ interface HomeView : BaseView {
     fun navigateToSearchScreen()
     fun showBottomSheetFragment()
     fun navigateToMainQuizScreen()
+    fun navigateToMyFavouriteScreen()
 }

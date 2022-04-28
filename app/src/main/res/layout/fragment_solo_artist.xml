@@ -1,73 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.SoloArtistGroupFragment"
-    android:orientation="vertical"
-    android:background="@color/app_color">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_top_solo_artist_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/color_top_solo_artist"
-        app:layout_constraintTop_toTopOf="parent"
-        android:padding="@dimen/margin_medium_2"
-        />
-
+    android:fillViewport="false">
     <LinearLayout
-        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:padding="@dimen/margin_medium_2"
-        app:layout_constraintTop_toBottomOf="@+id/rv_top_solo_artist_group"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/str_txt_solo"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".fragments.SoloArtistGroupFragment"
+        android:orientation="vertical"
+        android:background="@color/app_color">
 
-            <ImageView
-                android:id="@+id/iv_filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_down_arrow"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:paddingTop="@dimen/margin_card_medium"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/str_txt_sort_by"
-                android:textSize="14sp"
-                android:layout_marginRight="@dimen/margin_medium_2"
-                android:textColor="@color/color_view_more"
-                android:layout_toLeftOf="@+id/iv_filter"
-                android:textStyle="normal"/>
-
-        </RelativeLayout>
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_all_solo_artist"
+            android:id="@+id/rv_top_solo_artist_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:paddingBottom="@dimen/margin_medium_2"
-            android:overScrollMode="never"
+            android:background="@color/color_top_solo_artist"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/margin_medium_2"
             />
 
-    </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/margin_medium_2"
+            app:layout_constraintTop_toBottomOf="@+id/rv_top_solo_artist_group"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_txt_solo"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
-</LinearLayout>
+                <ImageView
+                    android:id="@+id/iv_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_down_arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingTop="@dimen/margin_card_medium"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_txt_sort_by"
+                    android:textSize="14sp"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:textColor="@color/color_view_more"
+                    android:layout_toLeftOf="@+id/iv_filter"
+                    android:textStyle="normal"/>
+
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_all_solo_artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="@dimen/margin_medium"
+                android:overScrollMode="never"
+                />
+
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/white">
+           <ImageView
+               android:id="@+id/iv_ads"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="bottom"
+               android:src="@drawable/ic_small_ads"
+               android:layout_marginBottom="@dimen/margin_large"/>
+       </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

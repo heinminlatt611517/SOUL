@@ -6,11 +6,8 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.activity.BaseActivity
 import com.heinminlatt.soul_client_app.R
-import com.heinminlatt.soul_client_app.adapters.NewsDetailCommentAdapter
-import com.heinminlatt.soul_client_app.adapters.RelatedNewsAdapter
 import com.heinminlatt.soul_client_app.adapters.RelatedVideoAdapter
-import com.heinminlatt.soul_client_app.adapters.VideoDetailCommentAdapter
-import kotlinx.android.synthetic.main.activity_new_details.*
+import com.heinminlatt.soul_client_app.bottomSheetDialogFragments.VideoCommentBottomSheetFragment
 import kotlinx.android.synthetic.main.activity_video_details.*
 
 class VideoDetailsActivity : BaseActivity() {
@@ -22,7 +19,7 @@ class VideoDetailsActivity : BaseActivity() {
         }
     }
 
-    private lateinit var mVideoDetailCommentAdapter: VideoDetailCommentAdapter
+
     private lateinit var mRelatedVideoAdapter: RelatedVideoAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,17 +27,21 @@ class VideoDetailsActivity : BaseActivity() {
         setContentView(R.layout.activity_video_details)
 
         setUpRecyclerView()
+        setUpActionListener()
+    }
+
+    private fun setUpActionListener() {
+        iv_viewMoreCommentData.setOnClickListener {
+            val bottomSheetDialogFragment= VideoCommentBottomSheetFragment()
+            this.supportFragmentManager.let { it -> bottomSheetDialogFragment.show(
+                    it,
+                    bottomSheetDialogFragment.tag
+            )
+            }
+        }
     }
 
     private fun setUpRecyclerView() {
-        //comment recycler view
-        rv_video_detail_comment.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        mVideoDetailCommentAdapter = VideoDetailCommentAdapter()
-        rv_video_detail_comment.adapter = mVideoDetailCommentAdapter
-
-        mVideoDetailCommentAdapter.setNewData(mutableListOf(1, 2))
-
         //related video recycler view
         rv_video_detail_related.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

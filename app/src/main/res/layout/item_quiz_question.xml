@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cv_quiz"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/margin_medium_2"
     app:cardBackgroundColor="@color/color_gray_lighter"
     app:cardElevation="0dp"
@@ -15,46 +15,41 @@
     android:layout_marginRight="@dimen/margin_medium_2"
     >
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/margin_medium_2"
-        android:paddingTop="@dimen/margin_small"
-        android:paddingRight="@dimen/margin_medium_2"
-        android:weightSum="3">
+        android:padding="@dimen/margin_medium"
+       >
 
         <TextView
             android:id="@+id/tv_quiz_char"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:gravity="left"
             android:text="A."
             android:textColor="@color/color_gray_light"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
         <TextView
             android:id="@+id/tv_quiz_question"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="@dimen/margin_medium_2"
-            android:paddingRight="@dimen/margin_medium_2"
             android:text="WooWoo"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small"
             android:textColor="@color/color_gray_light"
             android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="right">
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_quiz_char"
+            app:layout_constraintEnd_toStartOf="@+id/iv_select_quick"
+            />
 
             <ImageView
                 android:id="@+id/iv_select_quick"
@@ -62,10 +57,10 @@
                 android:layout_height="20dp"
                 android:background="@drawable/circle_bg_gray"
                 android:scaleType="centerInside"
-                android:src="@drawable/user" />
-        </LinearLayout>
+                android:src="@drawable/user"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

@@ -122,6 +122,15 @@
     <string name="str_txt_rank">Rank</string>
     <string name="str_txt_score">Scores</string>
     <string name="str_txt_i_give_up"><u>I give up!</u></string>
+    <string name="str_txt_hint_comment"><font size="14">Add a comment</font></string>
+    <string name="str_txt_answer_right">Your answer is right !</string>
+    <string name="str_txt_points">Points</string>
+    <string name="str_txt_totalScore">Total Score:</string>
+    <string name="str_btn_next_quiz">NEXT QUIZZES</string>
+    <string name="str_btn_exit_quiz">EXIT QUIZZE</string>
+    <string name="str_txt_wrong_status">Oops! wrong answer</string>
+    <string name="str_txt_give_up_status">Oops! I give up this quizze</string>
+    <string name="str_txt_time_up_status">Oops! The selection time is up.</string>
 
 
 </resources>

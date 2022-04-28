@@ -10,11 +10,9 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
-import com.heinminlatt.soul_client_app.activities.MainQuizActivity
-import com.heinminlatt.soul_client_app.activities.NewDetailsActivity
-import com.heinminlatt.soul_client_app.activities.SearchActivity
-import com.heinminlatt.soul_client_app.activities.SoloArtistDetailsActivity
+import com.heinminlatt.soul_client_app.activities.*
 import com.heinminlatt.soul_client_app.adapters.*
+import com.heinminlatt.soul_client_app.bottomSheetDialogFragments.ReactionBottomSheetFragment
 import com.heinminlatt.soul_client_app.mvp.presenters.HomePresenter
 import com.heinminlatt.soul_client_app.mvp.presenters.impls.HomePresenterImpl
 import com.heinminlatt.soul_client_app.mvp.views.HomeView
@@ -91,6 +89,10 @@ class HomeFragment : BaseFragment() , HomeView{
 
         cup_animationView.setOnClickListener {
             mHomePresenter.onTapQuiz()
+        }
+
+        iv_favourite.setOnClickListener {
+            mHomePresenter.onTapFavourite()
         }
     }
 
@@ -172,7 +174,7 @@ class HomeFragment : BaseFragment() , HomeView{
     }
 
     override fun showBottomSheetFragment() {
-        val bottomSheetDialogFragment=BottomSheetFragment()
+        val bottomSheetDialogFragment= ReactionBottomSheetFragment()
         activity?.supportFragmentManager?.let { it -> bottomSheetDialogFragment.show(
             it,
             bottomSheetDialogFragment.tag
@@ -183,6 +185,11 @@ class HomeFragment : BaseFragment() , HomeView{
     override fun navigateToMainQuizScreen() {
         startActivity(context?.let { it1 -> MainQuizActivity.newIntent(it1) })
         slideBottomToTopAnimation()
+    }
+
+    override fun navigateToMyFavouriteScreen() {
+        startActivity(context?.let { it1 -> MyFavouriteActivity.newIntent(it1) })
+        slideToAnimation()
     }
 
     override fun showErrorMessage(errorMessage: String) {
