@@ -1,7 +1,6 @@
 package com.heinminlatt.soul_client_app.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,11 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.adapters.AllGirlGroupAdapter
-import com.heinminlatt.soul_client_app.adapters.ArtistBoyAdapter
-import com.heinminlatt.soul_client_app.adapters.ArtistGirlAdapter
 import com.heinminlatt.soul_client_app.adapters.TopGirlGroupAdapter
-import kotlinx.android.synthetic.main.artist_boy_group_layout.*
-import kotlinx.android.synthetic.main.artist_girl_group_layout.*
 import kotlinx.android.synthetic.main.fragment_girl_group.*
 
 private const val ARG_PARAM1 = "param1"

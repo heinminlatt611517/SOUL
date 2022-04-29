@@ -72,7 +72,7 @@
         android:orientation="vertical"
         android:padding="@dimen/margin_medium_2"
         android:background="@color/color_main_quiz"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start_quiz"
         app:layout_constraintTop_toBottomOf="@+id/quizImageLayout">
 
         <TextView
@@ -109,11 +109,14 @@
                 android:paddingRight="@dimen/margin_medium_2"
                 >
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_combined_shape_favourite"
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/cup_animationView"
+                    android:layout_width="25dp"
+                    android:layout_height="38dp"
+                    app:lottie_rawRes="@raw/dashboard"
                     android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
                     />
 
                 <TextView
@@ -129,23 +132,24 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_start_quiz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/color_btn_quiz"
-            android:padding="16dp"
-            android:textStyle="bold"
-            android:text="@string/str_btn_start_quiz"
-            android:textAllCaps="false"
-            app:cornerRadius="12dp"
-            android:layout_marginLeft="@dimen/margin_medium_2"
-            android:layout_marginRight="@dimen/margin_medium_2"
-            android:layout_marginTop="@dimen/margin_large"
-            />
-
     </LinearLayout>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_start_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/color_btn_quiz"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:text="@string/str_btn_start_quiz"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:textAllCaps="false"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/margin_medium_2"
+        android:layout_marginRight="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_large"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

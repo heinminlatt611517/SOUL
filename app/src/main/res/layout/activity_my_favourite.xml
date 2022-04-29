@@ -24,6 +24,7 @@
             android:src="@drawable/ic_left_arrow"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:tint="@color/text_color"
             android:id="@+id/iv_back_favourite"/>
 
         <TextView

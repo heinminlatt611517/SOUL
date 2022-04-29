@@ -1,22 +1,17 @@
 package com.heinminlatt.soul_client_app.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.adapters.MyFavouriteNewsAdapter
-import com.heinminlatt.soul_client_app.adapters.TopGirlGroupAdapter
 import com.heinminlatt.soul_client_app.mvp.presenters.MyFavouritePresenter
 import com.heinminlatt.soul_client_app.mvp.presenters.impls.MyFavouritePresenterImpl
 import com.heinminlatt.soul_client_app.mvp.views.MyFavouriteView
-import kotlinx.android.synthetic.main.fragment_girl_group.*
-import kotlinx.android.synthetic.main.fragment_girl_group.rv_top_girl_group
 import kotlinx.android.synthetic.main.fragment_my_favourite_news.*
 
 private const val ARG_PARAM1 = "param1"

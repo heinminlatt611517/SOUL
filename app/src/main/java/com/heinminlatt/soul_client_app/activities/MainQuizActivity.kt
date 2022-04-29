@@ -24,7 +24,8 @@ class MainQuizActivity : BaseActivity() {
 
     private fun setUpActionListener() {
         iv_cancel.setOnClickListener {
-            finish()
+            finishAffinity()
+            startActivity(MainActivity.newIntent(this))
             slideTopToBottomAnimation()
         }
 

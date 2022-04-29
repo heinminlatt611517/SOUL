@@ -129,7 +129,7 @@
             android:id="@+id/iv_right_arrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_right_arrow"
+            android:src="@drawable/ic_ritht_arrow_blue_dark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             />
@@ -195,7 +195,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/ic_right_arrow" />
+            android:src="@drawable/ic_ritht_arrow_blue_dark" />
     </RelativeLayout>
 
 

@@ -1,7 +1,6 @@
 package com.heinminlatt.soul_client_app.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.adapters.AllBoyGroupAdapter
-import com.heinminlatt.soul_client_app.adapters.AllGirlGroupAdapter
 import com.heinminlatt.soul_client_app.adapters.TopBoyGroupAdapter
 import kotlinx.android.synthetic.main.fragment_girl_group.*
 

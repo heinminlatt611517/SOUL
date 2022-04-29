@@ -90,16 +90,33 @@
                         app:layout_constraintBottom_toTopOf="@+id/iv_firstPrice"
                         app:layout_constraintTop_toTopOf="@+id/iv_firstPrice"/>
 
-                    <ImageView
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/iv_firstPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:src="@drawable/ic_first_price_rectangle"/>
-
-
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <ImageView
+                            android:id="@+id/iv_firstPrice_rectangle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_first_price_rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@+id/iv_firstPrice_rectangle"
+                            app:layout_constraintBottom_toBottomOf="@id/iv_firstPrice_rectangle"
+                            app:layout_constraintEnd_toEndOf="@+id/iv_firstPrice_rectangle"
+                            app:layout_constraintStart_toStartOf="@id/iv_firstPrice_rectangle"
+                            android:text="@string/str_txt_1st"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -117,20 +134,42 @@
                         android:layout_height="50dp"
                         android:scaleType="centerInside"
                         android:src="@drawable/user"
-                        android:background="@drawable/circle_bg_gray"
+                        android:background="@drawable/circle_bg_dark_gray"
                         app:layout_constraintStart_toStartOf="@+id/iv_thirdPrice"
                         app:layout_constraintEnd_toEndOf="@id/iv_thirdPrice"
                         app:layout_constraintBottom_toTopOf="@+id/iv_thirdPrice"
                         app:layout_constraintTop_toTopOf="@+id/iv_thirdPrice"/>
-                    <ImageView
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/iv_secondPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_second_price_rectangle"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:paddingLeft="@dimen/margin_medium_2"
-                        />
+                        app:layout_constraintStart_toStartOf="parent">
+                        <ImageView
+                            android:id="@+id/iv_secondPrice_rectangle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_second_price_rectangle"
+                            android:paddingLeft="@dimen/margin_medium_2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@+id/iv_secondPrice_rectangle"
+                            app:layout_constraintBottom_toBottomOf="@id/iv_secondPrice_rectangle"
+                            app:layout_constraintEnd_toEndOf="@+id/iv_secondPrice_rectangle"
+                            app:layout_constraintStart_toStartOf="@id/iv_secondPrice_rectangle"
+                            android:text="@string/str_txt_2nd"
+                            android:layout_marginTop="@dimen/margin_large"
+                            android:layout_marginLeft="@dimen/margin_medium_2"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
                     <ImageView
@@ -149,19 +188,40 @@
                         android:layout_height="50dp"
                         android:scaleType="centerInside"
                         android:src="@drawable/user"
-                        android:background="@drawable/circle_bg_gray"
+                        android:background="@drawable/circle_bg_dark_gray"
                         app:layout_constraintStart_toStartOf="@+id/iv_secondPrice"
                         app:layout_constraintEnd_toEndOf="@id/iv_secondPrice"
                         app:layout_constraintBottom_toTopOf="@+id/iv_secondPrice"
                         app:layout_constraintTop_toTopOf="@+id/iv_secondPrice"/>
-                    <ImageView
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/iv_thirdPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:paddingRight="@dimen/margin_medium_2"
-                        android:src="@drawable/ic_third_price_rectangle"/>
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <ImageView
+                            android:id="@+id/iv_thirdPrice_rectangle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/margin_medium_2"
+                            android:src="@drawable/ic_third_price_rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@+id/iv_thirdPrice_rectangle"
+                            app:layout_constraintBottom_toBottomOf="@id/iv_thirdPrice_rectangle"
+                            app:layout_constraintEnd_toEndOf="@+id/iv_thirdPrice_rectangle"
+                            app:layout_constraintStart_toStartOf="@id/iv_thirdPrice_rectangle"
+                            android:text="@string/str_txt_3rd"
+                            android:layout_marginTop="@dimen/margin_large"
+                            android:layout_marginRight="@dimen/margin_medium_2"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -171,7 +231,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-            android:background="@drawable/left_bottom_and_right_bottom_gradient_radius"
+            android:background="@drawable/left_top_and_right_top_gradient_radius"
             android:scaleType="fitXY">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_scoreboardWinner"

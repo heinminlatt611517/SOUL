@@ -52,7 +52,8 @@ class StartQuizActivity : BaseActivity(),StartQuizView {
 
     private fun setUpActionListener() {
         iv_back.setOnClickListener {
-            finish()
+            finishAffinity()
+            startActivity(MainQuizActivity.newIntent(this))
             slideBackAnimation()
         }
 
@@ -86,6 +87,7 @@ class StartQuizActivity : BaseActivity(),StartQuizView {
         }
         else{
             displayWrongDialogFragment()
+
         }
     }
 

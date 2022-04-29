@@ -28,7 +28,9 @@
                 android:paddingLeft="14dp"
                 android:src="@drawable/ic_left_arrow"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:id="@+id/iv_back_from_detail"
+                app:tint="@color/text_color"/>
 
             <TextView
                 android:id="@+id/tv_solo_artist_title"

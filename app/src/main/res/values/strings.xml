@@ -31,7 +31,7 @@
     <string name="str_txt_go_back_to_login">Go Back To Login</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="str_account">Account</string>
+    <string name="str_account">Profile</string>
     <string name="str_artist">Artists</string>
     <string name="str_news">News</string>
     <string name="str_video">Video</string>
@@ -131,6 +131,17 @@
     <string name="str_txt_wrong_status">Oops! wrong answer</string>
     <string name="str_txt_give_up_status">Oops! I give up this quizze</string>
     <string name="str_txt_time_up_status">Oops! The selection time is up.</string>
+    <string name="str_txt_1st">1ST</string>
+    <string name="str_txt_2nd">2nd</string>
+    <string name="str_txt_3rd">3rd</string>
+    <string name="str_txt_exit_content">! If you exit for this time,your entire scores will be reset</string>
+    <string name="str_txt_r_you_sure">Are you sure?</string>
+    <string name="str_btn_exit">EXIT</string>
+    <string name="str_btn_no">NO</string>
+    <string name="str_txt_scoreboard">Scoreboard</string>
+    <string name="str_txt_tryAgain">TRY AGAIN</string>
+    <string name="str_txt_title_final_score">FINAL SCORE</string>
+    <string name="str_txt_images">Images</string>
 
 
 </resources>

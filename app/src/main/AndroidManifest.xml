@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOUL.NoActionBar">
-        <activity android:name=".activities.ScoreboardActivity"></activity>
+        <activity android:name=".activities.ArtistSoloImageDetailActivity"></activity>
+        <activity android:name=".activities.AllSoloArtistDetailsCollectionActivity" />
+        <activity android:name=".activities.FinalScoreActivity" />
+        <activity android:name=".activities.ScoreboardActivity" />
         <activity android:name=".activities.StartQuizActivity" />
         <activity android:name=".activities.MainQuizActivity" />
         <activity android:name=".activities.SearchActivity" />

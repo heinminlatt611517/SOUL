@@ -1,7 +1,6 @@
 package com.heinminlatt.soul_client_app.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,13 +8,10 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
-import com.heinminlatt.soul_client_app.adapters.MyFavouriteNewsAdapter
 import com.heinminlatt.soul_client_app.adapters.MyFavouriteVideoAdapter
 import com.heinminlatt.soul_client_app.mvp.presenters.MyFavouritePresenter
 import com.heinminlatt.soul_client_app.mvp.presenters.impls.MyFavouritePresenterImpl
 import com.heinminlatt.soul_client_app.mvp.views.MyFavouriteView
-import kotlinx.android.synthetic.main.fragment_my_favourite_news.*
-import kotlinx.android.synthetic.main.fragment_my_favourite_news.rv_myFavouriteNews
 import kotlinx.android.synthetic.main.fragment_my_favourite_video.*
 
 private const val ARG_PARAM1 = "param1"

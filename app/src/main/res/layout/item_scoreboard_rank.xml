@@ -54,7 +54,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_quiz" />
+            android:src="@drawable/ic_cup" />
         <TextView
             android:id="@+id/tv_score_count"
             android:layout_width="wrap_content"

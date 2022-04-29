@@ -5,6 +5,7 @@
     <color name="button_color">#2CB9C1</color>
     <color name="text_color">#2CB9C1</color>
     <color name="color_gray_light">#A1A6AD</color>
+    <color name="color_gray_dark">#636B78</color>
     <color name="color_black">#0A2942</color>
     <color name="color_top_solo_artist">#EFF5FA</color>
     <color name="color_gold">#FFD700</color>
@@ -41,7 +42,9 @@
 
     <color name="color_btn_quiz">#0A2942</color>
     <color name="color_score_board_bg">#0A2942</color>
+    <color name="color_main_black">#343D4B</color>
 
+    <color name="solo_image_status_bar_color">#051C2E</color>
 
 
 </resources>

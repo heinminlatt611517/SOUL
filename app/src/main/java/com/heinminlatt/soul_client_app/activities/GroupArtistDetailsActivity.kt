@@ -9,7 +9,6 @@ import com.heinminlatt.shared.activity.BaseActivity
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.adapters.*
 import kotlinx.android.synthetic.main.activity_group_artist_details.*
-import kotlinx.android.synthetic.main.activity_solo_artist_details.*
 import kotlinx.android.synthetic.main.activity_solo_artist_details.dots_indicator
 
 
