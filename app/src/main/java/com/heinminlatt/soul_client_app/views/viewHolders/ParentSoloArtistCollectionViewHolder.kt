@@ -19,7 +19,6 @@ class ParentSoloArtistCollectionViewHolder(itemView: View) : BaseViewHolder<Arra
         itemView.rv_solo_image.layoutManager =
             GridLayoutManager(itemView.context, 3, GridLayoutManager.VERTICAL, false)
         itemView.rv_solo_image.adapter = childSoloImageAdapter
-        val spacingInPixels: Unit =
         itemView.rv_solo_image.addItemDecoration(SpaceItemsDecoration(16))
         childSoloImageAdapter.setNewData(data)
     }

@@ -9,7 +9,7 @@ class SoloArtistDetailPresenterImpl : SoloArtistDetailPresenter,AbstractBasePres
 
     }
 
-    override fun onTapSoloImageItem() {
-        mView?.navigateToArtistSoloImageDetailScreen()
+    override fun onTapSoloImageItem(index :Int) {
+        mView?.navigateToArtistSoloImageDetailScreen(index)
     }
 }

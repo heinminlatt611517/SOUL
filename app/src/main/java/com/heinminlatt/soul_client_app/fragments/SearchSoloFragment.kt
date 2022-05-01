@@ -6,8 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
+import com.heinminlatt.soul_client_app.adapters.MyFavouriteSoloArtistAdapter
+import kotlinx.android.synthetic.main.fragment_my_favourite_solo_artist.*
+import kotlinx.android.synthetic.main.fragment_search_solo.*
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
@@ -32,6 +37,9 @@ class SearchSoloFragment : BaseFragment() {
                 }
             }
     }
+
+    private lateinit var mMyFavouriteSoloArtistAdapter: MyFavouriteSoloArtistAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,5 +47,20 @@ class SearchSoloFragment : BaseFragment() {
         return inflater.inflate(R.layout.fragment_search_solo, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setUpRecyclerView()
+    }
+
+    private fun setUpRecyclerView() {
+        //top girl group
+        rv_search_solo.layoutManager =
+            LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        mMyFavouriteSoloArtistAdapter = MyFavouriteSoloArtistAdapter()
+        rv_search_solo.adapter = mMyFavouriteSoloArtistAdapter
+
+        mMyFavouriteSoloArtistAdapter.setNewData(mutableListOf(1,2,3,5,6,7,7,8))
+    }
 
 }

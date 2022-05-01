@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,16 +12,30 @@ import com.heinminlatt.shared.activity.BaseActivity
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.adapters.ArtistSoloImageDetailAdapter
 import kotlinx.android.synthetic.main.activity_artist_solo_image_detail.*
+import kotlinx.android.synthetic.main.item_solo_video.*
 
 class ArtistSoloImageDetailActivity : BaseActivity() {
 
     companion object {
-        fun newIntent(context: Context) : Intent {
-            return Intent(context, ArtistSoloImageDetailActivity::class.java)
+        private const val SOLO_IMAGE_INDEX_EXTRA = "Solo Image index extra"
+        fun newIntent(context: Context, soloImageIndex: Int): Intent {
+            var intent = Intent(context, ArtistSoloImageDetailActivity::class.java)
+            intent.putExtra(SOLO_IMAGE_INDEX_EXTRA, soloImageIndex)
+            return intent
         }
+
     }
 
     private lateinit var mArtistSoloImageDetailAdapter: ArtistSoloImageDetailAdapter
+
+
+    private val images = arrayOf<Int>(
+            R.drawable.ic_solo_image,
+            R.drawable.ic_solo_image_one,
+            R.drawable.ic_solo_image,
+            R.drawable.ic_solo_image_one,
+            R.drawable.ic_solo_image
+    )
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,11 +61,16 @@ class ArtistSoloImageDetailActivity : BaseActivity() {
     private fun setUpRecyclerView() {
         // recycler view
         rv_solo_image_detail.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+                LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         mArtistSoloImageDetailAdapter = ArtistSoloImageDetailAdapter()
         rv_solo_image_detail.adapter = mArtistSoloImageDetailAdapter
 
-        mArtistSoloImageDetailAdapter.setNewData(mutableListOf(1,2,4,5,6,7))
+
+        (rv_solo_image_detail.layoutManager as LinearLayoutManager).
+        scrollToPositionWithOffset(intent.getIntExtra(SOLO_IMAGE_INDEX_EXTRA, 0), -1)
+
+        mArtistSoloImageDetailAdapter.notifyDataSetChanged()
+        mArtistSoloImageDetailAdapter.setNewData(images.toMutableList())
 
     }
 
@@ -58,3 +78,4 @@ class ArtistSoloImageDetailActivity : BaseActivity() {
 
     }
 }
+

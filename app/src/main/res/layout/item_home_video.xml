@@ -35,16 +35,6 @@
         app:layout_constraintTop_toBottomOf="@+id/cv_related_video"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/iv_more_vest"
-        android:src="@drawable/ic_reaction_more_vest"
-        android:paddingTop="3dp"
-        android:layout_marginRight="@dimen/margin_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_relatedVideo_title"
-        />
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
@@ -125,6 +115,17 @@
             android:layout_marginLeft="@dimen/margin_medium"
             android:gravity="center"
             android:textColor="@color/color_gray_light"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_more_vest"
+            android:src="@drawable/ic_reaction_more_vest"
+            android:paddingTop="3dp"
+            android:layout_marginRight="@dimen/margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_alignParentEnd="true"
+            />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,6 +31,14 @@ class SoloArtistDetailsActivity : BaseActivity(),SoloArtistDetailView {
     private lateinit var mSoloImageAdapter: SoloImageAdapter
     private lateinit var mSoloArtistVideoAdapter: SoloArtistVideoAdapter
 
+    private val images = arrayOf<Int>(
+            R.drawable.ic_solo_image,
+            R.drawable.ic_solo_image_two,
+            R.drawable.ic_solo_image,
+            R.drawable.ic_solo_image_two,
+            R.drawable.ic_solo_image
+    )
+
     //presenter
     private lateinit var mPresenter : SoloArtistDetailPresenter
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,6 +69,12 @@ class SoloArtistDetailsActivity : BaseActivity(),SoloArtistDetailView {
             finish()
             slideBackAnimation()
         }
+
+
+        iv_viewMore_video.setOnClickListener {
+            startActivity(AllVideoCollectionActivity.newIntent(this))
+            slideToAnimation()
+        }
     }
 
     private fun setUpViewPagerWithIndicator() {
@@ -76,7 +90,8 @@ class SoloArtistDetailsActivity : BaseActivity(),SoloArtistDetailView {
         mSoloImageAdapter = SoloImageAdapter(mPresenter)
         rv_solo_image.adapter = mSoloImageAdapter
 
-        mSoloImageAdapter.setNewData(mutableListOf(1, 2,3,4,5,6,7))
+        mSoloImageAdapter.setNewData(images.toMutableList())
+
 
         // video recycler view
         rv_video.layoutManager =
@@ -87,9 +102,9 @@ class SoloArtistDetailsActivity : BaseActivity(),SoloArtistDetailView {
         mSoloArtistVideoAdapter.setNewData(mutableListOf(1, 2, 3,4,5,6))
     }
 
-    override fun navigateToArtistSoloImageDetailScreen() {
+    override fun navigateToArtistSoloImageDetailScreen(soloImageItemIndex : Int) {
         finish()
-        startActivity(ArtistSoloImageDetailActivity.newIntent(this))
+        startActivity(ArtistSoloImageDetailActivity.newIntent(this,soloImageItemIndex))
         slideBottomToTopAnimation()
     }
 

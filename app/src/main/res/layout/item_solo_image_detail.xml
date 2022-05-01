@@ -7,5 +7,6 @@
     android:layout_marginBottom="100dp"
     android:layout_marginTop="58dp"
     android:paddingEnd="@dimen/margin_medium_2"
-    android:scaleType="fitXY">
+    android:scaleType="fitXY"
+    android:id="@+id/iv_solo_image_detail">
 </ImageView>

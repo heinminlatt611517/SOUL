@@ -5,13 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
+import com.heinminlatt.soul_client_app.adapters.NewsAdapter
+import com.heinminlatt.soul_client_app.mvp.presenters.SearchNewsPresenter
+import com.heinminlatt.soul_client_app.mvp.presenters.impls.SearchNewsPresenterImpl
+import com.heinminlatt.soul_client_app.mvp.views.SearchNewsView
+import kotlinx.android.synthetic.main.fragment_search_news.*
+import kotlinx.android.synthetic.main.home_news_layout.*
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class SearchNewsFragment : BaseFragment() {
+class SearchNewsFragment : BaseFragment(),SearchNewsView {
     private var param1: String? = null
     private var param2: String? = null
 
@@ -22,6 +30,8 @@ class SearchNewsFragment : BaseFragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+    private lateinit var mNewsAdapter: NewsAdapter
+    private lateinit var mPresenter : SearchNewsPresenter
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
@@ -37,6 +47,32 @@ class SearchNewsFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_search_news, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setUpPresenter()
+        setUpRecyclerView()
+    }
+
+    private fun setUpPresenter() {
+        mPresenter = ViewModelProviders.of(this).get(SearchNewsPresenterImpl::class.java)
+        mPresenter.initPresenter(this)
+    }
+
+    private fun setUpRecyclerView() {
+        //news
+        rv_search_news.layoutManager =
+            LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        mNewsAdapter = NewsAdapter(mPresenter)
+        rv_search_news.adapter = mNewsAdapter
+
+        mNewsAdapter.setNewData(mutableListOf(1, 2, 3, 4))
+    }
+
+    override fun showErrorMessage(errorMessage: String) {
+
     }
 
 

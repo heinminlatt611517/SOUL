@@ -3,8 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_color"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/margin_medium_2"
+    android:paddingRight="@dimen/margin_medium_2"
+    android:paddingTop="@dimen/margin_medium_2"
     tools:context=".fragments.MyFavouriteSoloArtistFragment">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_my_favourite_solo_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_color"
+    android:background="@color/white"
     android:paddingLeft="@dimen/margin_medium_2"
     android:paddingRight="@dimen/margin_medium_2"
     tools:context=".fragments.MyFavouriteVideoFragment">

@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOUL.NoActionBar">
-        <activity android:name=".activities.ArtistSoloImageDetailActivity"></activity>
+        <activity android:name=".activities.AllVideoCollectionActivity"></activity>
+        <activity android:name=".activities.ArtistSoloImageDetailActivity" />
         <activity android:name=".activities.AllSoloArtistDetailsCollectionActivity" />
         <activity android:name=".activities.FinalScoreActivity" />
         <activity android:name=".activities.ScoreboardActivity" />

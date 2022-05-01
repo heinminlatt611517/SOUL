@@ -5,8 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
+import com.heinminlatt.soul_client_app.adapters.MyFavouriteSoloArtistAdapter
+import com.heinminlatt.soul_client_app.views.viewHolders.MyFavouriteSoloArtistViewHolder
+import kotlinx.android.synthetic.main.fragment_my_favourite_solo_artist.*
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
@@ -21,14 +26,6 @@ class MyFavouriteSoloArtistFragment : BaseFragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_my_favourite_solo_artist, container, false)
-    }
-
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
@@ -39,4 +36,30 @@ class MyFavouriteSoloArtistFragment : BaseFragment() {
                 }
             }
     }
+
+    private lateinit var mMyFavouriteSoloArtistAdapter: MyFavouriteSoloArtistAdapter
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_my_favourite_solo_artist, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setUpRecyclerView()
+    }
+
+        private fun setUpRecyclerView() {
+            //top girl group
+            rv_my_favourite_solo_artist.layoutManager =
+                LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+            mMyFavouriteSoloArtistAdapter = MyFavouriteSoloArtistAdapter()
+            rv_my_favourite_solo_artist.adapter = mMyFavouriteSoloArtistAdapter
+
+            mMyFavouriteSoloArtistAdapter.setNewData(mutableListOf(1,2,3,5,6,7,7,8))
+    }
+
 }

@@ -14,8 +14,10 @@ class SoloImageViewHolder(itemView: View,private val mDelegate : SoloArtistDetai
     override fun bindData(data: Int) {
      mData = data
         itemView.iv_solo_image.setOnClickListener {
-            mDelegate.onTapSoloImageItem()
+            mDelegate.onTapSoloImageItem(adapterPosition)
         }
+
+        itemView.iv_solo_image.setImageResource(data)
     }
 
 
