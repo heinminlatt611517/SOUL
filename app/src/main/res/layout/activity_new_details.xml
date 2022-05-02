@@ -111,9 +111,10 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_time_foreground" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_combine_shape_clock" />
 
                     <TextView
                         android:id="@+id/tv_news_count_time"
@@ -122,6 +123,7 @@
                         android:text="2 DAYS AGO"
                         android:gravity="center"
                         android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_small"
                         android:textColor="@color/color_gray" />
                 </LinearLayout>
 
@@ -168,7 +170,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="@dimen/margin_small"
-                        android:src="@drawable/ic_reaction_like"
+                        android:src="@drawable/ic_like"
                         />
 
                     <TextView
@@ -188,8 +190,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/iv_reaction_unLike"
                         android:layout_toRightOf="@+id/tv_reaction_like_count"
-                        android:src="@drawable/ic_reaction_unlike"
-                        android:paddingTop="@dimen/margin_small"
+                        android:src="@drawable/ic_unlike"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="@dimen/margin_large"
@@ -260,7 +261,7 @@
                     android:id="@+id/iv_viewMoreComment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_down_arrow"
+                    android:src="@drawable/ic_more_navigation"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/tv_comment"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_comment"/>

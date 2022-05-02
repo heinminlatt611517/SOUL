@@ -83,9 +83,9 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_time_foreground" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_combine_shape_clock" />
 
                     <TextView
                         android:id="@+id/tv_news_count_time"

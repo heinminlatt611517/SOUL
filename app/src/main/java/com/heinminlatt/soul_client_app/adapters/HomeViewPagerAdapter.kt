@@ -10,15 +10,14 @@ import androidx.viewpager.widget.ViewPager
 import com.heinminlatt.soul_client_app.R
 
 
-
 class HomeViewPagerAdapter(private val context: Context) : PagerAdapter() {
     private var layoutInflater: LayoutInflater? = null
     private val images = arrayOf<Int>(
-        R.drawable.artist_boy,
-        R.drawable.aritst_girl,
-        R.drawable.solo_artist,
-        R.drawable.aritst_girl,
-        R.drawable.artist_boy
+            R.drawable.home_banner_girl,
+            R.drawable.home_banner,
+            R.drawable.home_banner_girl,
+            R.drawable.home_banner,
+            R.drawable.home_banner
     )
 
     override fun getCount(): Int {
@@ -31,7 +30,7 @@ class HomeViewPagerAdapter(private val context: Context) : PagerAdapter() {
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         layoutInflater = context.getSystemService(
-            Context.LAYOUT_INFLATER_SERVICE
+                Context.LAYOUT_INFLATER_SERVICE
         ) as LayoutInflater
         val view: View = layoutInflater!!.inflate(R.layout.item_home_slider, null)
         val imageView = view.findViewById<ImageView>(R.id.iv_home_slider)

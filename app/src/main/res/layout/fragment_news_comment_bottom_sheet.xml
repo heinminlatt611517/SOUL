@@ -81,7 +81,7 @@
         android:id="@+id/iv_reaction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_woo"
+        android:src="@drawable/ic_smile_blue"
         android:layout_marginLeft="@dimen/margin_medium_2"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/margin_card_medium_2"

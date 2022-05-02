@@ -17,11 +17,11 @@ class ArtistViewPagerAdapter(
 ) : PagerAdapter() {
     private var layoutInflater: LayoutInflater? = null
     private val images = arrayOf<Int>(
-        R.drawable.artist_boy,
-        R.drawable.aritst_girl,
+        R.drawable.home_banner,
+        R.drawable.home_banner_girl,
         R.drawable.solo_artist,
-        R.drawable.aritst_girl,
-        R.drawable.artist_boy
+        R.drawable.home_banner_girl,
+        R.drawable.home_banner
     )
 
     override fun getCount(): Int {

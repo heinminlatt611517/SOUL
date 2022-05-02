@@ -142,6 +142,7 @@
     <string name="str_txt_tryAgain">TRY AGAIN</string>
     <string name="str_txt_title_final_score">FINAL SCORE</string>
     <string name="str_txt_images">Images</string>
+    <string name="str_txt_selecton_time_start_soon">Selection Time will start counting soon</string>
 
 
 </resources>

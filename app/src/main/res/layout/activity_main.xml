@@ -21,7 +21,7 @@
         app:itemIconTint="@drawable/nav_color_state"
         app:itemTextColor="@drawable/nav_color_state"
         app:labelVisibilityMode="labeled"
-        app:itemIconSize="35dp"
+        app:itemIconSize="18sp"
         app:itemRippleColor="@color/button_color"
         app:menu="@menu/bottom_nav_menu" />
 

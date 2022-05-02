@@ -52,7 +52,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="@dimen/margin_small"
-            android:src="@drawable/ic_reaction_like"
+            android:src="@drawable/ic_like"
             />
 
         <TextView
@@ -72,8 +72,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/iv_reaction_unLike"
             android:layout_toRightOf="@+id/tv_reaction_like_count"
-            android:src="@drawable/ic_reaction_unlike"
-            android:paddingTop="@dimen/margin_small"
+            android:src="@drawable/ic_unlike"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="@dimen/margin_xxlarge"
