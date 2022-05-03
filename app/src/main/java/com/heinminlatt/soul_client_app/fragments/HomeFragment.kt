@@ -1,6 +1,7 @@
 package com.heinminlatt.soul_client_app.fragments
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.heinminlatt.shared.fragment.BaseFragment
 import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.activities.*
@@ -27,7 +29,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class HomeFragment : BaseFragment() , HomeView{
+class HomeFragment : BaseFragment(), HomeView {
 
     private var param1: String? = null
     private var param2: String? = null
@@ -42,6 +44,7 @@ class HomeFragment : BaseFragment() , HomeView{
                 }
             }
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -52,7 +55,7 @@ class HomeFragment : BaseFragment() , HomeView{
 
 
     //view pod
-    private lateinit var mSubscriberViewPod : SubscriberViewPod
+    private lateinit var mSubscriberViewPod: SubscriberViewPod
 
 
     private lateinit var mSoloArtistAdapter: SoloArtistAdapter
@@ -61,7 +64,14 @@ class HomeFragment : BaseFragment() , HomeView{
     private lateinit var mHomeVideoAdapter: HomeVideoAdapter
 
     //presenter
-    private lateinit var mHomePresenter : HomePresenter
+    private lateinit var mHomePresenter: HomePresenter
+
+    //facebook shimmer loading
+    private lateinit var mHomeBannerShimmerFrameLayout: ShimmerFrameLayout
+    private lateinit var mHomeSoloArtistShimmerFrameLayout: ShimmerFrameLayout
+    private lateinit var mHomeNewsShimmerFrameLayout: ShimmerFrameLayout
+    private lateinit var mHomeVideoShimmerFrameLayout: ShimmerFrameLayout
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -73,13 +83,32 @@ class HomeFragment : BaseFragment() , HomeView{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        startImageAnimation()
         setUpPresenter()
+
+        initView(view)
+        firstTimerShowLoading()
+
+        startImageAnimation()
         setUpViewPagerWithIndicator()
         setUpViewPod()
         setUpRecyclerAdapter()
         setUpActionListener()
 
+
+    }
+
+    private fun initView(view: View) {
+        mHomeBannerShimmerFrameLayout = view.findViewById(R.id.home_banner_loading)
+        mHomeSoloArtistShimmerFrameLayout = view.findViewById(R.id.home_solo_artist_loading)
+        mHomeNewsShimmerFrameLayout = view.findViewById(R.id.home_news_loading)
+        mHomeVideoShimmerFrameLayout = view.findViewById(R.id.home_video_loading)
+    }
+
+    private fun firstTimerShowLoading() {
+        showLoading()
+        Handler().postDelayed({
+           hideLoading()
+        },4000)
     }
 
     private fun setUpActionListener() {
@@ -174,11 +203,12 @@ class HomeFragment : BaseFragment() , HomeView{
     }
 
     override fun showBottomSheetFragment() {
-        val bottomSheetDialogFragment= ReactionBottomSheetFragment()
-        activity?.supportFragmentManager?.let { it -> bottomSheetDialogFragment.show(
-            it,
-            bottomSheetDialogFragment.tag
-        )
+        val bottomSheetDialogFragment = ReactionBottomSheetFragment()
+        activity?.supportFragmentManager?.let { it ->
+            bottomSheetDialogFragment.show(
+                it,
+                bottomSheetDialogFragment.tag
+            )
         }
     }
 
@@ -192,9 +222,31 @@ class HomeFragment : BaseFragment() , HomeView{
         slideToAnimation()
     }
 
+    private fun showLoading() {
+        layout_home_loading.visibility = View.VISIBLE
+        layout_home.visibility = View.GONE
+        mHomeBannerShimmerFrameLayout.startShimmer()
+        mHomeSoloArtistShimmerFrameLayout.startShimmer()
+        mHomeNewsShimmerFrameLayout.startShimmer()
+        mHomeVideoShimmerFrameLayout.startShimmer()
+
+    }
+
+    private fun hideLoading() {
+        layout_home_loading.visibility = View.GONE
+        layout_home.visibility = View.VISIBLE
+        mHomeBannerShimmerFrameLayout.stopShimmer()
+        mHomeSoloArtistShimmerFrameLayout.stopShimmer()
+        mHomeNewsShimmerFrameLayout.stopShimmer()
+        mHomeVideoShimmerFrameLayout.stopShimmer()
+    }
+
+
+
     override fun showErrorMessage(errorMessage: String) {
 
     }
+
 
 
 }

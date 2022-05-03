@@ -59,11 +59,18 @@
                 android:layout_alignParentBottom="true"
                 android:background="@color/color_gray_light1" />
         </RelativeLayout>
+
+        <include
+            android:id="@+id/layout_group_artist_detail_loading"
+            android:visibility="gone"
+            layout="@layout/loading_layout_group_artist_detail"/>
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
+
             <LinearLayout
+                android:id="@+id/layout_group_artist_detail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -95,97 +102,107 @@
                         app:progressMode="true"
                         app:selectedDotColor="@color/white" />
 
-                    <LinearLayout
-                        android:id="@+id/layout_one"
-                        android:layout_width="wrap_content"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/margin_medium_2"
-                        android:layout_marginTop="@dimen/margin_medium_2"
-                        android:gravity="center"
-                        android:orientation="horizontal"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/vp_group_artist_slider">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_sub_blue_bg"
-                            android:paddingTop="8dp"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/ic_twitter" />
-
-                        <TextView
-                            android:id="@+id/tv_sub1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/margin_card_medium"
-                            android:gravity="center"
-                            android:text="25K"
-                            android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="4dp"
-                            android:text="@string/str_txt_subscriber"
-                            android:textColor="@color/color_gray_light" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/margin_large"
-                        android:layout_marginTop="@dimen/margin_medium_2"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        app:layout_constraintStart_toEndOf="@+id/layout_one"
-                        app:layout_constraintTop_toBottomOf="@+id/vp_group_artist_slider">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:background="@drawable/ic_sub_pink_bg"
-                            android:paddingTop="8dp"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/ic_instagram" />
-
-                        <TextView
-                            android:id="@+id/tv_sub2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/margin_card_medium"
-                            android:gravity="center"
-                            android:text="25K"
-                            android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="4dp"
-                            android:text="@string/str_txt_subscriber"
-                            android:textColor="@color/color_gray_light" />
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/iv_favourite"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_medium_3"
-                        android:layout_marginRight="@dimen/margin_medium_2"
-                        android:src="@drawable/ic_favourite_gray"
+                        android:layout_margin="@dimen/margin_medium_2"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/vp_group_artist_slider" />
+                        app:layout_constraintTop_toBottomOf="@+id/vp_group_artist_slider">
+                        <LinearLayout
+                            android:id="@+id/layout_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_sub_blue_bg"
+                                android:paddingTop="8dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_twitter" />
+
+                            <TextView
+                                android:id="@+id/tv_sub1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/margin_card_medium"
+                                android:gravity="center"
+                                android:text="25K"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="4dp"
+                                android:text="@string/str_txt_subscriber"
+                                android:textColor="@color/color_gray_light" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/margin_medium_2"
+                            app:layout_constraintStart_toEndOf="@+id/layout_one"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_sub_pink_bg"
+                                android:paddingTop="8dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_instagram" />
+
+                            <TextView
+                                android:id="@+id/tv_sub2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/margin_card_medium"
+                                android:gravity="center"
+                                android:text="25K"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="4dp"
+                                android:text="@string/str_txt_subscriber"
+                                android:textColor="@color/color_gray_light" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_favourite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_favourite_gray"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <LinearLayout
@@ -206,7 +223,6 @@
                             android:textStyle="bold"
                             android:textSize="20sp"
                             android:textColor="@color/black"/>
-
 
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="match_parent"
@@ -235,13 +251,13 @@
                                 app:tabTextAppearance="@style/CustomTabTextAppearance">
 
                                 <com.google.android.material.tabs.TabItem
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/str_txt_current_member"
                                     />
 
                                 <com.google.android.material.tabs.TabItem
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/str_txt_former_member" />
 

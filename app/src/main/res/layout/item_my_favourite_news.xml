@@ -35,7 +35,7 @@
                 <ImageView
                     android:id="@+id/iv_news"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="wrap_content"
                     android:scaleType="fitXY"
                     android:src="@drawable/news" />
             </com.google.android.material.card.MaterialCardView>
@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/margin_medium"
-                    android:maxLines="4"
+                    android:maxLines="3"
                     android:scrollHorizontally="true"
                     android:ellipsize="end"
                     android:text="Big Bang unveils the title of their comeback through a new teaser,Big Bang unveils the title of their comeback through a new teaser,Big Bang unveils the title of their comeback through a new teaser. . ."

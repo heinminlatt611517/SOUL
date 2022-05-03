@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_color"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_large"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/home_banner_loading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/margin_medium_2"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_loading_home_banner"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_medium"
+                                android:layout_marginLeft="@dimen/margin_medium_2"
+                                android:layout_marginRight="@dimen/margin_medium_2"
+                                android:layout_marginBottom="@dimen/margin_large"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:paddingRight="@dimen/margin_medium_2">
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="24sp"
+                                        android:layout_height="24sp"
+                                        android:layout_gravity="center"
+                                        app:cardBackgroundColor="@color/color_gray_lighter"
+                                        app:cardCornerRadius="@dimen/margin_small"
+                                        app:cardElevation="0dp" />
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="14sp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="@dimen/margin_medium"
+                                        app:cardBackgroundColor="@color/color_gray_lighter"
+                                        app:cardCornerRadius="@dimen/margin_small"
+                                        app:cardElevation="0dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="@dimen/margin_medium_2">
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="24sp"
+                                        android:layout_height="24sp"
+                                        android:layout_gravity="center"
+                                        app:cardBackgroundColor="@color/color_gray_lighter"
+                                        app:cardCornerRadius="@dimen/margin_small"
+                                        app:cardElevation="0dp" />
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="14sp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="@dimen/margin_medium"
+                                        app:cardBackgroundColor="@color/color_gray_lighter"
+                                        app:cardCornerRadius="@dimen/margin_small"
+                                        app:cardElevation="0dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_medium_2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_txt_solo_artist"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/home_solo_artist_loading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <include
+                                        layout="@layout/layout_home_solo_artist_loading_item"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_marginTop="6dp" />
+
+                                    <include
+                                        layout="@layout/layout_home_solo_artist_loading_item"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_marginLeft="@dimen/margin_medium"
+                                        android:layout_marginTop="6dp" />
+
+                                    <include
+                                        layout="@layout/layout_home_solo_artist_loading_item"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_marginLeft="@dimen/margin_medium"
+                                        android:layout_marginTop="6dp" />
+
+                                    <include
+                                        layout="@layout/layout_home_solo_artist_loading_item"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_marginLeft="@dimen/margin_medium"
+                                        android:layout_marginTop="6dp" />
+
+                                    <include
+                                        layout="@layout/layout_home_solo_artist_loading_item"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_marginLeft="@dimen/margin_medium"
+                                        android:layout_marginTop="6dp" />
+
+                                    <include
+                                        layout="@layout/layout_home_solo_artist_loading_item"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_marginLeft="@dimen/margin_medium"
+                                        android:layout_marginTop="6dp" />
+
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_medium_2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_txt_news"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/text_color"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_marginBottom="@dimen/margin_small"
+                                    android:paddingLeft="@dimen/margin_medium_2"
+                                    android:paddingRight="@dimen/margin_medium_2"
+                                    android:text="Breaking"
+                                    android:textColor="@color/white" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/color_gray_light1"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_marginBottom="@dimen/margin_small"
+                                    android:paddingLeft="@dimen/margin_medium_2"
+                                    android:paddingRight="@dimen/margin_medium_2"
+                                    android:text="Trending"
+                                    android:textColor="@color/color_gray_light" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="1"
+                                app:cardBackgroundColor="@color/color_gray_light1"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_marginBottom="@dimen/margin_small"
+                                    android:paddingLeft="@dimen/margin_medium_2"
+                                    android:paddingRight="@dimen/margin_medium_2"
+                                    android:text="Popular"
+                                    android:textColor="@color/color_gray_light" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:id="@+id/home_news_loading"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="@dimen/margin_medium_2"
+                                    android:orientation="vertical">
+                                    <include
+                                        layout="@layout/layout_home_news_loading_item"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp" />
+
+                                    <include
+                                        layout="@layout/layout_home_news_loading_item"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_large" />
+
+                                    <include
+                                        layout="@layout/layout_home_news_loading_item"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_large" />
+
+                                </LinearLayout>
+
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+                        </ScrollView>
+
+                    </LinearLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+                        <TextView
+                            android:id="@+id/tv_videos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_txt_video"
+                            android:textSize="20sp"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:layout_marginLeft="@dimen/margin_medium_2"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/tv_viewMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_txt_viewMore"
+                            android:textSize="14sp"
+                            android:layout_marginRight="@dimen/margin_medium_2"
+                            android:textColor="@color/color_view_more"
+                            app:layout_constraintTop_toTopOf="@+id/tv_videos"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_videos"
+                            app:layout_constraintEnd_toStartOf="@+id/iv_viewMore_video"/>
+
+                        <ImageView
+                            android:id="@+id/iv_viewMore_video"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_medium_2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tv_videos"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_videos"
+                            android:src="@drawable/ic_right_arrow"/>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/home_video_loading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_videos">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+                                <View
+                                    android:id="@+id/view"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_margin="@dimen/margin_medium_2"
+                                    android:background="@drawable/ic_loading_home_banner"/>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/cv_video"
+                                    app:layout_constraintTop_toBottomOf="@+id/view"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_width="100sp"
+                                    android:layout_height="14sp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="@color/color_gray_lighter"
+                                    app:cardCornerRadius="@dimen/margin_small"
+                                    android:layout_marginLeft="@dimen/margin_medium_2"
+                                    android:layout_marginTop="@dimen/margin_medium_2"
+                                    app:cardElevation="0dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:background="@color/white"
+                                    app:layout_constraintTop_toBottomOf="@+id/cv_video"
+                                    android:layout_marginTop="@dimen/margin_medium">
+                                    <ImageButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/iv_reaction_like"
+                                        android:layout_marginLeft="@dimen/margin_medium_2"
+                                        android:src="@drawable/ic_like"
+                                        android:background="?attr/selectableItemBackgroundBorderless"
+                                        android:clickable="true"
+                                        android:layout_centerVertical="true"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/tv_reaction_like_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/iv_reaction_like"
+                                        android:text="200"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/color_gray_light"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/iv_reaction_unLike"
+                                        android:layout_toRightOf="@+id/tv_reaction_like_count"
+                                        android:src="@drawable/ic_unlike"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_large"
+                                        android:background="?attr/selectableItemBackgroundBorderless"
+                                        android:clickable="true"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/tv_reaction_unlike_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/iv_reaction_unLike"
+                                        android:text="12"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/color_gray_light"/>
+
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/iv_reaction_message"
+                                        android:layout_toRightOf="@+id/tv_reaction_unlike_count"
+                                        android:src="@drawable/ic_gray_message"
+                                        android:paddingTop="3dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_large"
+                                        android:background="?attr/selectableItemBackgroundBorderless"
+                                        android:clickable="true"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/tv_reaction_message_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/iv_reaction_message"
+                                        android:text="12"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/margin_medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/color_gray_light"/>
+
+                                    <LinearLayout
+                                        android:layout_width="40dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true">
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/iv_reaction_more_vest"
+                                            android:src="@drawable/ic_reaction_more_vest"
+                                            android:background="?attr/selectableItemBackgroundBorderless"
+                                            android:clickable="true"
+                                            android:focusable="true"
+                                            />
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

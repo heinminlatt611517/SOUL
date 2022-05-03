@@ -37,6 +37,7 @@ ext {
     mmTextVersion = "1.5"
     circleImageVersion = "3.1.0"
     akexorcist_localization_version = "1.2.11"
+    facebook_shimmer_version = "0.5.0"
 
     libraries = [
             ktx                     : "androidx.core:core-ktx:$ktxVersion",
@@ -99,7 +100,7 @@ ext {
             firebase_cloud_messaging : "com.google.firebase:firebase-messaging:$fcm_version",
             stepperIndicator        :  "com.github.badoualy:stepper-indicator:$stepperIndicatorVersion",
             circleImageView : "de.hdodenhof:circleimageview:$circleImageVersion",
-            akexorcist_localization : "com.akexorcist:localization:$akexorcist_localization_version"
-
+            akexorcist_localization : "com.akexorcist:localization:$akexorcist_localization_version",
+            faceBookShimmerLoading :  "com.facebook.shimmer:shimmer:$facebook_shimmer_version"
     ]
 }

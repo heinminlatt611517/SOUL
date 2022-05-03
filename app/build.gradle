@@ -62,6 +62,9 @@ dependencies {
     implementation rootProject.ext.libraries.swiperefreshlayout
     implementation rootProject.ext.libraries.youtube
 
+    //
+    implementation rootProject.ext.libraries.faceBookShimmerLoading
+
     //Mavigation component
     implementation rootProject.ext.libraries.navigation_fragment
     implementation rootProject.ext.libraries.navigation_ui
