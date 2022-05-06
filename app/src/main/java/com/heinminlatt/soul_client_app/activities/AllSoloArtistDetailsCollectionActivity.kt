@@ -10,8 +10,7 @@ import com.heinminlatt.soul_client_app.R
 import com.heinminlatt.soul_client_app.adapters.ParentSoloArtistCollectionAdapter
 import com.heinminlatt.soul_client_app.views.components.CustomLinearLayoutManager
 import kotlinx.android.synthetic.main.activity_all_solo_artist_details_activty.*
-import kotlinx.android.synthetic.main.activity_all_solo_artist_details_activty.iv_back
-import kotlinx.android.synthetic.main.activity_artist_solo_image_detail.*
+
 
 class AllSoloArtistDetailsCollectionActivity : BaseActivity() {
 
@@ -36,12 +35,10 @@ class AllSoloArtistDetailsCollectionActivity : BaseActivity() {
 
     }
 
-    private fun setUpActionListener() {
-        iv_back.setOnClickListener {
-            finish()
-            startActivity(SoloArtistDetailsActivity.newIntent(this))
-            slideBackAnimation()
-        }
+    private fun setUpActionListener() = iv_back.setOnClickListener {
+        finish()
+        startActivity(SoloArtistDetailsActivity.newIntent(this))
+        slideBackAnimation()
     }
 
     private fun setUpRecyclerView() {

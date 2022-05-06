@@ -13,6 +13,8 @@ import com.heinminlatt.soul_client_app.utils.boyGroupArtist
 import com.heinminlatt.soul_client_app.utils.girlGroupArtist
 import kotlinx.android.synthetic.main.activity_artist_category.*
 
+//import kotlinx.android.synthetic.main.activity_artist_category.*
+
 class ArtistCategoryActivity : BaseActivity() {
 
 

@@ -26,11 +26,10 @@
         >
         <ImageView
             android:id="@+id/iv_user"
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/user"
-            android:background="@drawable/circle_bg_gray"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scoreboard_rank_circle"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,7 +53,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_cup" />
+            android:src="@drawable/ic_cup1" />
         <TextView
             android:id="@+id/tv_score_count"
             android:layout_width="wrap_content"

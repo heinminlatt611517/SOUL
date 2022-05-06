@@ -17,9 +17,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.iid.FirebaseInstanceId
 import com.heinminlatt.shared.R
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
@@ -116,23 +114,23 @@ fun showKeyboard(activity: Activity, editText: EditText) {
     }
 }
 
-    fun getFirebaseInstanceID() {
-        FirebaseInstanceId.getInstance().instanceId
-            .addOnCompleteListener(OnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                    Log.w("TOKEN", "getInstanceId failed", task.exception)
-                    return@OnCompleteListener
-                }
-
-                // Get new Instance ID token
-                val token = task.result?.token
-
-                // Log and toast
-                val msg = "token: $token"
-                Log.d("TOKEN", msg)
-                //Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
-            })
-    }
+//    fun getFirebaseInstanceID() {
+//        FirebaseInstanceId.getInstance().instanceId
+//            .addOnCompleteListener(OnCompleteListener { task ->
+//                if (!task.isSuccessful) {
+//                    Log.w("TOKEN", "getInstanceId failed", task.exception)
+//                    return@OnCompleteListener
+//                }
+//
+//                // Get new Instance ID token
+//                val token = task.result?.token
+//
+//                // Log and toast
+//                val msg = "token: $token"
+//                Log.d("TOKEN", msg)
+//                //Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+//            })
+//    }
 
       fun printHashKey(pContext: Context) {
         try {

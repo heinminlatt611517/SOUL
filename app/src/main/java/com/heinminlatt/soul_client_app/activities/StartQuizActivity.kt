@@ -104,7 +104,9 @@ class StartQuizActivity : BaseActivity(), StartQuizView {
         }
 
         tv_giveUp.setOnClickListener {
+            stopClockHandler()
             mStartQuizPresenter.onTapGiveUp()
+
         }
     }
 

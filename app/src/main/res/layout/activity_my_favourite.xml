@@ -69,98 +69,126 @@
 
             android:paddingBottom="@dimen/margin_large">
 
-            <RelativeLayout
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/layout_news"
                 android:layout_width="145dp"
                 android:layout_height="56dp"
                 android:layout_marginRight="@dimen/margin_medium"
-                android:background="@drawable/gradient_stroke_color"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/text_color"
+                app:cardElevation="0dp">
 
-                <ImageView
-                    android:id="@+id/iv_news"
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_news" />
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp">
+                    <ImageView
+                        android:id="@+id/iv_news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_news_white" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="@dimen/margin_medium"
-                    android:layout_toRightOf="@+id/iv_news"
-                    android:gravity="center"
-                    android:text="@string/str_news"
-                    android:textColor="@color/black"
-                    android:textSize="13sp" />
+                    <TextView
+                        android:id="@+id/tv_news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_toRightOf="@+id/iv_news"
+                        android:gravity="center"
+                        android:text="@string/str_news"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
 
-                <TextView
-                    android:id="@+id/tv_news_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="center"
-                    android:text="3"
-                    android:textColor="@color/text_color"
-                    android:textSize="13sp" />
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_news_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </RelativeLayout>
 
-            <RelativeLayout
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/layout_video"
                 android:layout_width="145dp"
                 android:layout_height="56dp"
                 android:layout_marginRight="@dimen/margin_medium"
-                android:background="@drawable/fav_bg_rounded_corner_gray"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/color_gray_light1"
+                >
 
-                <ImageView
-                    android:id="@+id/iv_video"
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_utube" />
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="@dimen/margin_medium"
-                    android:layout_toRightOf="@+id/iv_video"
-                    android:gravity="center"
-                    android:text="@string/str_txt_video"
-                    android:textColor="@color/black"
-                    android:textSize="13sp" />
+                    <ImageView
+                        android:id="@+id/iv_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_video_green" />
 
-                <TextView
-                    android:id="@+id/tv_video_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="center"
-                    android:text="3"
-                    android:textColor="@color/text_color"
-                    android:textSize="13sp" />
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_toRightOf="@+id/iv_video"
+                        android:gravity="center"
+                        android:text="@string/str_txt_video"
+                        android:textColor="@color/color_gray_light"
+                        android:textSize="13sp" />
 
-            <RelativeLayout
+                    <TextView
+                        android:id="@+id/tv_video_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/color_gray_light"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/layout_group_artist"
                 android:layout_width="187dp"
                 android:layout_height="56dp"
                 android:layout_marginRight="@dimen/margin_medium"
-                android:background="@drawable/fav_bg_rounded_corner_gray"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
+                app:cardElevation="0dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/color_gray_light1"
+                >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp">
 
                 <ImageView
                     android:id="@+id/iv_group_artist"
@@ -168,9 +196,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_news" />
+                    android:src="@drawable/ic_group_artist_green" />
 
                 <TextView
+                    android:id="@+id/tv_group_artist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -179,7 +208,7 @@
                     android:layout_toRightOf="@+id/iv_group_artist"
                     android:gravity="center"
                     android:text="@string/str_txt_group_artists"
-                    android:textColor="@color/black"
+                    android:textColor="@color/color_gray_light"
                     android:textSize="13sp" />
 
                 <TextView
@@ -191,26 +220,35 @@
                     android:layout_alignParentBottom="true"
                     android:gravity="center"
                     android:text="3"
-                    android:textColor="@color/text_color"
+                    android:textColor="@color/color_gray_light"
                     android:textSize="13sp" />
             </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-            <RelativeLayout
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/layout_solo_artist"
                 android:layout_width="145dp"
                 android:layout_height="56dp"
                 android:layout_marginRight="@dimen/margin_medium"
-                android:background="@drawable/fav_bg_rounded_corner_gray"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/color_gray_light1"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp">
+
                 <ImageView
                     android:id="@+id/iv_solo_artist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/iv_solo_artist" />
+                    android:src="@drawable/ic_solo_green" />
                 <TextView
+                    android:id="@+id/tv_solo_artist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -219,9 +257,10 @@
                     android:layout_toRightOf="@+id/iv_solo_artist"
                     android:gravity="center"
                     android:text="@string/str_txt_solo_artist"
-                    android:textColor="@color/black"
+                    android:textColor="@color/color_gray_light"
                     android:textSize="13sp" />
                 <TextView
+                    android:id="@+id/tv_solo_artist_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -229,9 +268,10 @@
                     android:layout_alignParentBottom="true"
                     android:gravity="center"
                     android:text="3"
-                    android:textColor="@color/text_color"
+                    android:textColor="@color/color_gray_light"
                     android:textSize="13sp" />
-            </RelativeLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
 

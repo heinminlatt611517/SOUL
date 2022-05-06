@@ -83,6 +83,7 @@ class HomeFragment : BaseFragment(), HomeView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         setUpPresenter()
 
         initView(view)
@@ -135,7 +136,7 @@ class HomeFragment : BaseFragment(), HomeView {
 
 
     private fun setUpPresenter() {
-        mHomePresenter = ViewModelProviders.of(this).get(HomePresenterImpl::class.java)
+        mHomePresenter = ViewModelProviders.of(this)[HomePresenterImpl::class.java]
         mHomePresenter.initPresenter(this)
     }
 
